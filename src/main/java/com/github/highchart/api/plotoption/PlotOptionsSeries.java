@@ -1,0 +1,126 @@
+package com.github.highchart.api.plotoption;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+import com.github.highchart.api.base.BaseObject;
+
+
+@XmlType( namespace = "plotoptions" )
+@XmlAccessorType( XmlAccessType.NONE )
+public class PlotOptionsSeries extends BaseObject {
+
+    @XmlElement( type = PlotOptionsStates.class )
+    public PlotOptionsStates     states;
+
+    public PlotOptionsDataLabels dataLabels;
+
+    public String        stacking;
+
+    public PlotOptionsMarker     marker;
+
+    @XmlElement
+    public Boolean       allowPointSelect;
+
+    @XmlElement
+    public Boolean       shadow;
+
+    @XmlElement
+    public Integer       lineWidth;
+
+    @XmlElement
+    public Double        fillOpacity;
+
+    public int           borderWidth;
+
+    public PlotOptionsSeries() {
+    }
+
+    @SuppressWarnings( "unchecked" )
+    protected <T> T cast() {
+        return ( T ) this;
+    }
+
+    public int getBorderWidth() {
+        return borderWidth;
+    }
+
+    public PlotOptionsDataLabels getDataLabels() {
+        if ( dataLabels == null ) {
+            dataLabels = new PlotOptionsDataLabels();
+        }
+        return dataLabels;
+    }
+
+    public double getFillOpacity() {
+        return fillOpacity;
+    }
+
+    public int getLineWidth() {
+        return lineWidth;
+    }
+
+    public PlotOptionsMarker getMarker() {
+        if ( marker == null ) {
+            marker = new PlotOptionsMarker();
+        }
+        return marker;
+    }
+
+    public String getStacking() {
+        return stacking;
+    }
+
+    public PlotOptionsStates getStates() {
+        if ( states == null ) {
+            states = new PlotOptionsStates();
+        }
+        return states;
+    }
+
+    public boolean isAllowPointSelect() {
+        return allowPointSelect;
+    }
+
+    public boolean isShadow() {
+        return shadow;
+    }
+
+    public PlotOptionsSeries setAllowPointSelect( boolean allowPointSelect ) {
+        this.allowPointSelect = allowPointSelect;
+        return this;
+    }
+
+    public PlotOptionsSeries setBorderWidth( int borderWidth ) {
+        this.borderWidth = borderWidth;
+        return this;
+    }
+
+    public PlotOptionsSeries setFillOpacity( double fillOpacity ) {
+        this.fillOpacity = fillOpacity;
+        return this;
+    }
+
+    public PlotOptionsSeries setLineWidth( int lineWidth ) {
+        this.lineWidth = lineWidth;
+        return this;
+    }
+
+    public PlotOptionsSeries setShadow( boolean shadow ) {
+        this.shadow = shadow;
+        return this;
+    }
+
+    @XmlElement
+    public PlotOptionsSeries setStacking( String stacking ) {
+        this.stacking = stacking;
+        return this;
+    }
+
+    public PlotOptionsSeries setStates( PlotOptionsStates states ) {
+        this.states = states;
+        return this;
+    }
+}
