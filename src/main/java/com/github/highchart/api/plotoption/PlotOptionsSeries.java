@@ -13,30 +13,27 @@ import com.github.highchart.api.base.BaseObject;
 public class PlotOptionsSeries extends BaseObject {
 
     @XmlElement( type = PlotOptionsStates.class )
-    public PlotOptionsStates     states;
+    private PlotOptionsStates     states;
 
-    public PlotOptionsDataLabels dataLabels;
+    private PlotOptionsDataLabels dataLabels;
 
-    public String        stacking;
+    private String        stacking;
 
-    public PlotOptionsMarker     marker;
-
-    @XmlElement
-    public Boolean       allowPointSelect;
+    private PlotOptionsMarker     marker;
 
     @XmlElement
-    public Boolean       shadow;
+    private Boolean       allowPointSelect;
 
     @XmlElement
-    public Integer       lineWidth;
+    private Boolean       shadow;
 
     @XmlElement
-    public Double        fillOpacity;
+    private Integer       lineWidth;
 
-    public int           borderWidth;
+    @XmlElement
+    private Double        fillOpacity;
 
-    public PlotOptionsSeries() {
-    }
+    private int           borderWidth;
 
     @SuppressWarnings( "unchecked" )
     protected <T> T cast() {

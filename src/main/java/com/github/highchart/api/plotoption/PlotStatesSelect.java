@@ -9,12 +9,12 @@ import com.github.highchart.api.base.BaseObject;
 
 @XmlAccessorType( XmlAccessType.NONE )
 public class PlotStatesSelect extends BaseObject {
-    public String  color;
+    private String  color;
 
-    public String  borderColor;
+    private String  borderColor;
 
     @XmlElement
-    public Integer borderWidth;
+    private Integer borderWidth;
 
     public String getBorderColor() {
         return borderColor;

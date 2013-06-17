@@ -8,10 +8,7 @@ import com.github.highchart.api.base.BaseObject;
 public class PlotOptionsStates extends BaseObject {
 
     @XmlElement( type = PlotStatesSelect.class )
-    public PlotStatesSelect select;
-
-    public PlotOptionsStates() {
-    }
+    private PlotStatesSelect select;
 
     public PlotStatesSelect getSelect() {
         if ( select == null ) {

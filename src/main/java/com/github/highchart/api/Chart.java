@@ -6,27 +6,27 @@ import com.github.highchart.api.base.BaseObject;
 import com.github.highchart.api.shared.SeriesType;
 
 public class Chart extends BaseObject {
-    public String  zoomType;
+    private String  zoomType;
 
-    public String  backgroundColor;
+    private String  backgroundColor;
 
-    public Integer marginRight;
+    private Integer marginRight;
 
-    public Integer marginBottom;
+    private Integer marginBottom;
 
-    public Integer width;
+    private Integer width;
 
-    public Integer height;
+    private Integer height;
 
-    public String  defaultSeriesType;
+    private String  defaultSeriesType;
 
-    public int     marginLeft;
+    private int     marginLeft;
 
-    public int     marginTop;
+    private int     marginTop;
 
-    public Object  renderTo;
+    private Object  renderTo;
 
-    public Object  renderer;
+    private Object  renderer;
 
     public String getBackgroundColor() {
         return backgroundColor;

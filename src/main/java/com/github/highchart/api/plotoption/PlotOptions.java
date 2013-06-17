@@ -11,9 +11,9 @@ import com.github.highchart.api.base.BaseObject;
 public class PlotOptions extends BaseObject {
 
     @XmlElement
-    public final PlotOptionsSeries area, areaspline, line, pie, series, spline;
+    private final PlotOptionsSeries area, areaspline, line, pie, series, spline;
 
-    public PlotOptionsSeries       column, bar;
+    private PlotOptionsSeries       column, bar;
 
     public PlotOptions() {
         area = new PlotOptionsSeries();

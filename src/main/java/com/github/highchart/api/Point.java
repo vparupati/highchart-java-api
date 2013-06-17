@@ -11,16 +11,16 @@ import com.github.highchart.api.base.BaseObject;
 public class Point extends BaseObject {
 
     @XmlElement
-    public Double x;
+    private Double x;
 
     @XmlElement
-    public Double y;
+    private Double y;
 
-    public Boolean selected, sliced;
+    private Boolean selected, sliced;
 
-    public String  color;
+    private String  color;
 
-    public String  name;
+    private String  name;
 
     public Point() {
     }

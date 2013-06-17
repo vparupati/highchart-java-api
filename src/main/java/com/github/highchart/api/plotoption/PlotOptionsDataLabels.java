@@ -4,17 +4,17 @@ import com.github.highchart.api.base.BaseObject;
 
 public class PlotOptionsDataLabels extends BaseObject {
 
-    public String  color;
+    private String  color;
 
-    public boolean enabled;
+    private boolean enabled;
 
-    public Object  formatter;
+    private Object  formatter;
 
-    public Integer x, y, distance;
+    private Integer x, y, distance;
 
-    public String  align = "center";
+    private String  align = "center";
 
-    public double  rotation;
+    private double  rotation;
 
     public String getAlign() {
         return align;

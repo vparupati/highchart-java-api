@@ -19,27 +19,24 @@ import com.github.highchart.api.utils.JsonArray;
 public class Series extends BaseObject {
 
     @XmlElement( type = PlotMarkerStates.class )
-    public PlotMarkerStates states;
+    private PlotMarkerStates states;
 
     @XmlElements( @XmlElement( name = "data", type = Point.class ) )
-    public Object    data;
+    private Object    data;
 
     @XmlElement
-    public String    color;
+    private String    color;
 
     @XmlElement
-    public String    name;
+    private String    name;
 
     @XmlElement
-    public String    type;
+    private String    type;
 
     @XmlElement
-    public String    size;
+    private String    size;
 
-    public SeriesCenter center;
-
-    public Series() {
-    }
+    private SeriesCenter center;
 
     public String getCenterX() {
         return ( center != null ) ? center.getX() : null;

@@ -5,19 +5,19 @@ import com.github.highchart.api.base.BaseObject;
 
 public class AxisPlotLines extends BaseObject {
 
-    public int      zindex;
+    private int      zindex;
 
-    public int      width;
+    private int      width;
 
-    public double   value;
+    private double   value;
 
-    public String   id;
+    private String   id;
 
-    public String   color;
+    private String   color;
 
-    public String   dashStyle;
+    private String   dashStyle;
 
-    public AxisPlotLineLabel label;
+    private AxisPlotLineLabel label;
 
     public AxisPlotLines() {
         label = new AxisPlotLineLabel();

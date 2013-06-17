@@ -13,10 +13,10 @@ import com.github.highchart.api.base.BaseObject;
 public class AxisLabels extends BaseObject {
 
     @XmlElement
-    public Double rotation;
+    private Double rotation;
 
     @XmlElement
-    public String align;
+    private String align;
 
     public String getAlign() {
         return align;

@@ -17,37 +17,37 @@ import com.github.highchart.api.utils.JsonArray;
 public class Axis extends BaseObject {
 
     @XmlElement
-    public Integer                maxZoom;
+    private Integer                maxZoom;
 
     @XmlElement
-    public Boolean                startOnTick;
+    private Boolean                startOnTick;
 
     @XmlElement
-    public Double                 tickInterval;
+    private Double                 tickInterval;
 
     @XmlElement
-    public Boolean                showFirstLabel;
+    private Boolean                showFirstLabel;
 
     @XmlElement
-    public Double                 min;
+    private Double                 min;
 
     @XmlElement
-    public Double                 max;
+    private Double                 max;
 
     @XmlElement
-    public String                 type;
+    private String                 type;
 
     @XmlElement( type = AxisLabels.class )
-    public AxisLabels              labels;
+    private AxisLabels              labels;
 
-    public DateTimeLabelFormats   dateTimeLabelFormats;
+    private DateTimeLabelFormats   dateTimeLabelFormats;
 
     @XmlTransient
-    public ArrayString            categories;
+    private ArrayString            categories;
 
-    public JsonArray<AxisPlotLines> plotLines;
+    private JsonArray<AxisPlotLines> plotLines;
 
-    public Title                  title;
+    private Title                  title;
 
     public Axis() {
         labels = null;

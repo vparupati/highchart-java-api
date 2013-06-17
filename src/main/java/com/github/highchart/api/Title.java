@@ -11,12 +11,12 @@ import com.github.highchart.api.base.BaseObject;
 public class Title extends BaseObject {
 
     @XmlElement
-    public String   text;
+    private String   text;
 
-    public Style style;
+    private Style style;
 
     @XmlElement
-    public Integer  margin;
+    private Integer  margin;
 
     public Title() {
         style = null;

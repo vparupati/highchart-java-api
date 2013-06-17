@@ -5,21 +5,21 @@ import com.github.highchart.api.base.BaseObject;
 
 public class AxisPlotLineLabel extends BaseObject {
 
-    public String align;
+    private String align;
 
-    public String verticalAlign;
+    private String verticalAlign;
 
-    public double rotation;
+    private double rotation;
 
-    public String text;
+    private String text;
 
-    public String textAlign;
+    private String textAlign;
 
-    public double x;
+    private double x;
 
-    public double y;
+    private double y;
 
-    public Style  style;
+    private Style  style;
 
     public AxisPlotLineLabel() {
         style = new Style();

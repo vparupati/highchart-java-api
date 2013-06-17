@@ -4,11 +4,11 @@ import com.github.highchart.api.base.BaseObject;
 
 public class PlotOptionsMarker extends BaseObject {
 
-    public String    symbol;
+    private String    symbol;
 
-    public boolean   enabled;
+    private boolean   enabled;
 
-    public PlotMarkerStates states;
+    private PlotMarkerStates states;
 
     public PlotOptionsMarker() {
     }

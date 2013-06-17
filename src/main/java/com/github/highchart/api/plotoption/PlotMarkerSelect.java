@@ -4,9 +4,9 @@ import com.github.highchart.api.base.BaseObject;
 
 public class PlotMarkerSelect extends BaseObject {
 
-    public String fillColor, lineColor;
+    private String fillColor, lineColor;
 
-    public int    lineWidth;
+    private int    lineWidth;
 
     public String getFillColor() {
         return fillColor;

@@ -7,8 +7,6 @@ import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-
-
 import com.github.highchart.api.axis.Axis;
 import com.github.highchart.api.base.BaseObject;
 import com.github.highchart.api.plotoption.PlotOptions;
@@ -20,41 +18,38 @@ import com.github.highchart.api.utils.JsonArray;
 public class ChartOptions extends BaseObject {
 
     @XmlTransient
-    public Chart             chart;
+    private Chart             chart;
 
     @XmlElement
-    public Credits           credits;
+    private Credits           credits;
 
     @XmlElement
-    public Labels            labels;
+    private Labels            labels;
 
     @XmlElement
-    public Legend            legend;
+    private Legend            legend;
 
     @XmlElement
-    public PlotOptions       plotOptions;
+    private PlotOptions       plotOptions;
 
     // @XmlTransient
     @XmlElements( @XmlElement( name = "series", type = Series.class ) )
-    public JsonArray<Series> series;
+    private JsonArray<Series> series;
 
     @XmlElement
-    public Title             title;
+    private Title             title;
 
     @XmlElement
-    public Title             subtitle;
+    private Title             subtitle;
 
     @XmlElement
-    public Tooltip           tooltip;
+    private Tooltip           tooltip;
 
     @XmlElement
-    public Axis              xAxis;
+    private Axis              xAxis;
 
     @XmlElement
-    public Axis              yAxis;
-
-    public ChartOptions() {
-    }
+    private Axis              yAxis;
 
     public Chart getChart() {
         if ( chart == null ) {

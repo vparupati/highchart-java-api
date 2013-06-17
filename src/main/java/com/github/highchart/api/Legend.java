@@ -10,21 +10,21 @@ import com.github.highchart.api.base.BaseObject;
 @XmlAccessorType( XmlAccessType.NONE )
 public class Legend extends BaseObject {
 
-    public Boolean reversed;
+    private Boolean reversed;
 
-    public Boolean enabled;
+    private Boolean enabled;
 
-    public String  align;
+    private String  align;
 
-    public String  layout;
+    private String  layout;
 
-    public String  verticalAlign;
-
-    @XmlElement
-    public Integer x;
+    private String  verticalAlign;
 
     @XmlElement
-    public Integer y;
+    private Integer x;
+
+    @XmlElement
+    private Integer y;
 
     public String getAlign() {
         return align;

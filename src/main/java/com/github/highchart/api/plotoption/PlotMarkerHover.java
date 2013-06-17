@@ -4,7 +4,7 @@ import com.github.highchart.api.base.BaseObject;
 
 public class PlotMarkerHover extends BaseObject {
 
-    public boolean enabled;
+    private boolean enabled;
 
     public boolean isEnabled() {
         return enabled;

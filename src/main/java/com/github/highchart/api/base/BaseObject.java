@@ -10,10 +10,10 @@ import com.github.highchart.api.shared.Jsonify;
 public class BaseObject implements Jsonify {
 
     @XmlTransient
-    public Object innerHTML;
+    private Object innerHTML;
 
     @XmlTransient
-    public Object userObject;
+    private Object userObject;
 
     public BaseObject() {
         super();
