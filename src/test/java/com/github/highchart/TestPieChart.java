@@ -27,7 +27,7 @@ public class TestPieChart {
 
         String json = chartOptions.toJson();
 
-        Assert.assertEquals( "Expected spline json", pieJson, json );
+        Assert.assertEquals( "Expected pie json", pieJson, json );
 
     }
 
