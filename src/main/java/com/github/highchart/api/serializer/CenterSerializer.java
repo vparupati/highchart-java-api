@@ -2,7 +2,6 @@ package com.github.highchart.api.serializer;
 
 import java.lang.reflect.Type;
 
-
 import com.github.highchart.api.serie.SeriesCenter;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

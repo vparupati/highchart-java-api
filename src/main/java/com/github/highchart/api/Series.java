@@ -1,4 +1,4 @@
-package com.github.highchart.api.serie;
+package com.github.highchart.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,11 +7,9 @@ import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
-
-
-import com.github.highchart.api.Point;
 import com.github.highchart.api.base.BaseObject;
 import com.github.highchart.api.plotoption.PlotMarkerStates;
+import com.github.highchart.api.serie.SeriesCenter;
 import com.github.highchart.api.utils.JsonArray;
 
 @XmlAccessorType( XmlAccessType.NONE )
@@ -22,21 +20,21 @@ public class Series extends BaseObject {
     private PlotMarkerStates states;
 
     @XmlElements( @XmlElement( name = "data", type = Point.class ) )
-    private Object    data;
+    private Object           data;
 
     @XmlElement
-    private String    color;
+    private String           color;
 
     @XmlElement
-    private String    name;
+    private String           name;
 
     @XmlElement
-    private String    type;
+    private String           type;
 
     @XmlElement
-    private String    size;
+    private String           size;
 
-    private SeriesCenter center;
+    private SeriesCenter     center;
 
     public String getCenterX() {
         return ( center != null ) ? center.getX() : null;

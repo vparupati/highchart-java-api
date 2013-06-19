@@ -5,8 +5,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
-
-
 import com.github.highchart.api.base.BaseObject;
 import com.github.highchart.api.label.LabelsItems;
 import com.github.highchart.api.utils.JsonArray;

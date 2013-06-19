@@ -7,7 +7,6 @@ import java.util.Map.Entry;
 import com.github.highchart.api.base.Serializer;
 import com.github.highchart.api.datetime.DateTimeLabelFormats.TimeUnit;
 
-
 public class DateTimeLabelFormatsSerializer extends Serializer<DateTimeLabelFormats> {
 
     @Override

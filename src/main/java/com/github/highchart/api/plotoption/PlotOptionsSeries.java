@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.github.highchart.api.base.BaseObject;
 
-
 @XmlType( namespace = "plotoptions" )
 @XmlAccessorType( XmlAccessType.NONE )
 public class PlotOptionsSeries extends BaseObject {
@@ -17,28 +16,23 @@ public class PlotOptionsSeries extends BaseObject {
 
     private PlotOptionsDataLabels dataLabels;
 
-    private String        stacking;
+    private String                stacking;
 
     private PlotOptionsMarker     marker;
 
     @XmlElement
-    private Boolean       allowPointSelect;
+    private Boolean               allowPointSelect;
 
     @XmlElement
-    private Boolean       shadow;
+    private Boolean               shadow;
 
     @XmlElement
-    private Integer       lineWidth;
+    private Integer               lineWidth;
 
     @XmlElement
-    private Double        fillOpacity;
+    private Double                fillOpacity;
 
-    private int           borderWidth;
-
-    @SuppressWarnings( "unchecked" )
-    protected <T> T cast() {
-        return ( T ) this;
-    }
+    private int                   borderWidth;
 
     public int getBorderWidth() {
         return borderWidth;

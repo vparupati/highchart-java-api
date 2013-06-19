@@ -2,20 +2,19 @@ package com.github.highchart.api.axis;
 
 import com.github.highchart.api.base.BaseObject;
 
-
 public class AxisPlotLines extends BaseObject {
 
-    private int      zindex;
+    private int               zindex;
 
-    private int      width;
+    private int               width;
 
-    private double   value;
+    private double            value;
 
-    private String   id;
+    private String            id;
 
-    private String   color;
+    private String            color;
 
-    private String   dashStyle;
+    private String            dashStyle;
 
     private AxisPlotLineLabel label;
 

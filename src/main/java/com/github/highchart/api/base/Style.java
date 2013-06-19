@@ -1,10 +1,7 @@
-package com.github.highchart.api;
+package com.github.highchart.api.base;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import com.github.highchart.api.base.BaseObject;
-
 
 public class Style extends BaseObject {
 

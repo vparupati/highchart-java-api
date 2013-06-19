@@ -5,7 +5,6 @@ import java.util.Map;
 
 import com.github.highchart.api.base.BaseObject;
 
-
 public class DateTimeLabelFormats extends BaseObject {
     public enum TimeUnit {
         second, minute, hour, day, week, month, year;

@@ -7,10 +7,7 @@ import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-import com.github.highchart.api.axis.Axis;
 import com.github.highchart.api.base.BaseObject;
-import com.github.highchart.api.plotoption.PlotOptions;
-import com.github.highchart.api.serie.Series;
 import com.github.highchart.api.utils.JsonArray;
 
 @XmlRootElement( name = "chartOptions" )

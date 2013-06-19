@@ -1,6 +1,5 @@
 package com.github.highchart.api;
 
-import com.github.highchart.api.serie.Series;
 
 public class HighchartsFactory {
 

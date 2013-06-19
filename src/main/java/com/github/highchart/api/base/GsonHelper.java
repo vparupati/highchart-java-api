@@ -1,7 +1,5 @@
 package com.github.highchart.api.base;
 
-
-import com.github.highchart.api.Style;
 import com.github.highchart.api.datetime.DateTimeLabelFormats;
 import com.github.highchart.api.datetime.DateTimeLabelFormatsSerializer;
 import com.github.highchart.api.serializer.StyleSerializer;
@@ -17,7 +15,11 @@ public class GsonHelper {
 
     private static final GsonHelper INSTANCE    = new GsonHelper();
 
-    private final GsonBuilder       gsonBuilder;
+    static String toJson( Object object ) {
+        return INSTANCE.gsonBuilder.create().toJson( object );
+    }
+
+    private final GsonBuilder gsonBuilder;
 
     private GsonHelper() {
         gsonBuilder = new GsonBuilder().registerTypeAdapter( DateTimeLabelFormats.class, new DateTimeLabelFormatsSerializer() ) //
@@ -36,9 +38,5 @@ public class GsonHelper {
             }
 
         } );
-    }
-
-    static String toJson( Object object ) {
-        return INSTANCE.gsonBuilder.create().toJson( object );
     }
 }

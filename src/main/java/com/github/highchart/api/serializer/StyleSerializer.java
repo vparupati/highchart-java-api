@@ -2,9 +2,8 @@ package com.github.highchart.api.serializer;
 
 import java.util.Map;
 
-import com.github.highchart.api.Style;
 import com.github.highchart.api.base.Serializer;
-
+import com.github.highchart.api.base.Style;
 
 public class StyleSerializer extends Serializer<Style> {
 

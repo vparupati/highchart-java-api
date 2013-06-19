@@ -1,13 +1,12 @@
-package com.github.highchart.api.axis;
+package com.github.highchart.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-
-
-import com.github.highchart.api.Title;
+import com.github.highchart.api.axis.AxisLabels;
+import com.github.highchart.api.axis.AxisPlotLines;
 import com.github.highchart.api.base.BaseObject;
 import com.github.highchart.api.datetime.DateTimeLabelFormats;
 import com.github.highchart.api.utils.ArrayString;
@@ -17,37 +16,37 @@ import com.github.highchart.api.utils.JsonArray;
 public class Axis extends BaseObject {
 
     @XmlElement
-    private Integer                maxZoom;
+    private Integer                  maxZoom;
 
     @XmlElement
-    private Boolean                startOnTick;
+    private Boolean                  startOnTick;
 
     @XmlElement
-    private Double                 tickInterval;
+    private Double                   tickInterval;
 
     @XmlElement
-    private Boolean                showFirstLabel;
+    private Boolean                  showFirstLabel;
 
     @XmlElement
-    private Double                 min;
+    private Double                   min;
 
     @XmlElement
-    private Double                 max;
+    private Double                   max;
 
     @XmlElement
-    private String                 type;
+    private String                   type;
 
     @XmlElement( type = AxisLabels.class )
-    private AxisLabels              labels;
+    private AxisLabels               labels;
 
-    private DateTimeLabelFormats   dateTimeLabelFormats;
+    private DateTimeLabelFormats     dateTimeLabelFormats;
 
     @XmlTransient
-    private ArrayString            categories;
+    private ArrayString              categories;
 
     private JsonArray<AxisPlotLines> plotLines;
 
-    private Title                  title;
+    private Title                    title;
 
     public Axis() {
         labels = null;
@@ -61,11 +60,11 @@ public class Axis extends BaseObject {
         if ( categories == null ) {
             categories = new ArrayString();
         }
-        return ( ArrayString ) categories;
+        return categories;
     }
 
     public int getCategoriesLength() {
-        return ( categories != null ) ? ( ( ArrayString ) categories ).size() : 0;
+        return ( categories != null ) ? categories.size() : 0;
     }
 
     public DateTimeLabelFormats getDateTimeLabelFormats() {

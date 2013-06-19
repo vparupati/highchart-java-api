@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlElement;
 
 import com.github.highchart.api.base.BaseObject;
 
-
 @XmlAccessorType( XmlAccessType.NONE )
 public class Legend extends BaseObject {
 

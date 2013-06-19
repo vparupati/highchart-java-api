@@ -1,17 +1,18 @@
-package com.github.highchart.api.plotoption;
+package com.github.highchart.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 import com.github.highchart.api.base.BaseObject;
-
+import com.github.highchart.api.plotoption.PlotOptionsSeries;
 
 @XmlAccessorType( XmlAccessType.NONE )
 public class PlotOptions extends BaseObject {
 
     @XmlElement
-    private final PlotOptionsSeries area, areaspline, line, pie, series, spline;
+    private final PlotOptionsSeries area, areaspline, line, pie, series,
+            spline;
 
     private PlotOptionsSeries       column, bar;
 

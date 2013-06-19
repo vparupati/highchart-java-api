@@ -4,8 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-import com.github.highchart.api.Style;
-
+import com.github.highchart.api.base.Style;
 
 @XmlAccessorType( XmlAccessType.NONE )
 @XmlType( namespace = "labels" )

@@ -1,7 +1,5 @@
 package com.github.highchart.api;
 
-
-
 import com.github.highchart.api.base.BaseObject;
 import com.github.highchart.api.shared.SeriesType;
 
@@ -23,10 +21,6 @@ public class Chart extends BaseObject {
     private int     marginLeft;
 
     private int     marginTop;
-
-    private Object  renderTo;
-
-    private Object  renderer;
 
     public String getBackgroundColor() {
         return backgroundColor;
@@ -54,14 +48,6 @@ public class Chart extends BaseObject {
 
     public int getMarginTop() {
         return marginTop;
-    }
-
-    public Object getRenderer() {
-        return renderer;
-    }
-
-    public Object getRenderTo() {
-        return renderTo;
     }
 
     public int getWidth() {
@@ -105,14 +91,6 @@ public class Chart extends BaseObject {
     public Chart setMarginTop( int marginTop ) {
         this.marginTop = marginTop;
         return this;
-    }
-
-    public void setRenderer( Object renderer ) {
-        this.renderer = renderer;
-    }
-
-    public void setRenderTo( Object renderTo ) {
-        this.renderTo = renderTo;
     }
 
     public Chart setWidth( int width ) {

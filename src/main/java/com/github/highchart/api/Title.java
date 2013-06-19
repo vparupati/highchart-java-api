@@ -5,18 +5,18 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 import com.github.highchart.api.base.BaseObject;
-
+import com.github.highchart.api.base.Style;
 
 @XmlAccessorType( XmlAccessType.NONE )
 public class Title extends BaseObject {
 
     @XmlElement
-    private String   text;
+    private String  text;
 
-    private Style style;
+    private Style   style;
 
     @XmlElement
-    private Integer  margin;
+    private Integer margin;
 
     public Title() {
         style = null;

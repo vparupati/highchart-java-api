@@ -1,7 +1,7 @@
 package com.github.highchart.api.axis;
 
-import com.github.highchart.api.Style;
 import com.github.highchart.api.base.BaseObject;
+import com.github.highchart.api.base.Style;
 
 public class AxisPlotLineLabel extends BaseObject {
 

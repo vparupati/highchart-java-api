@@ -4,7 +4,6 @@ import javax.xml.bind.annotation.XmlElement;
 
 import com.github.highchart.api.base.BaseObject;
 
-
 public class PlotOptionsStates extends BaseObject {
 
     @XmlElement( type = PlotStatesSelect.class )

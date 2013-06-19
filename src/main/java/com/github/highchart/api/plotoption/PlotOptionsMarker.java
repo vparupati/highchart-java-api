@@ -4,9 +4,9 @@ import com.github.highchart.api.base.BaseObject;
 
 public class PlotOptionsMarker extends BaseObject {
 
-    private String    symbol;
+    private String           symbol;
 
-    private boolean   enabled;
+    private boolean          enabled;
 
     private PlotMarkerStates states;
 
