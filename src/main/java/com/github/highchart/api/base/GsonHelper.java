@@ -1,7 +1,7 @@
 package com.github.highchart.api.base;
 
-import com.github.highchart.api.datetime.DateTimeLabelFormats;
-import com.github.highchart.api.datetime.DateTimeLabelFormatsSerializer;
+import com.github.highchart.api.format.DateTimeLabelFormats;
+import com.github.highchart.api.serializer.DateTimeLabelFormatsSerializer;
 import com.github.highchart.api.serializer.StyleSerializer;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;

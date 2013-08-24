@@ -1,4 +1,4 @@
-package com.github.highchart.api.datetime;
+package com.github.highchart.api.format;
 
 import java.util.HashMap;
 import java.util.Map;

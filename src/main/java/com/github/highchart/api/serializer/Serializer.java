@@ -1,4 +1,4 @@
-package com.github.highchart.api.base;
+package com.github.highchart.api.serializer;
 
 import java.lang.reflect.Type;
 import java.util.Map;

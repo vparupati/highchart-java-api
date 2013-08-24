@@ -1,11 +1,11 @@
-package com.github.highchart.api.datetime;
+package com.github.highchart.api.serializer;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.github.highchart.api.base.Serializer;
-import com.github.highchart.api.datetime.DateTimeLabelFormats.TimeUnit;
+import com.github.highchart.api.format.DateTimeLabelFormats;
+import com.github.highchart.api.format.DateTimeLabelFormats.TimeUnit;
 
 public class DateTimeLabelFormatsSerializer extends Serializer<DateTimeLabelFormats> {
 

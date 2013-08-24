@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import com.github.highchart.api.axis.AxisLabels;
 import com.github.highchart.api.axis.AxisPlotLines;
 import com.github.highchart.api.base.BaseObject;
-import com.github.highchart.api.datetime.DateTimeLabelFormats;
+import com.github.highchart.api.format.DateTimeLabelFormats;
 import com.github.highchart.api.utils.ArrayString;
 import com.github.highchart.api.utils.JsonArray;
 

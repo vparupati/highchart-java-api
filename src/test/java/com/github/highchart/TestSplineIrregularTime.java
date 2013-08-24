@@ -8,7 +8,7 @@ import org.junit.Assert;
 import com.github.highchart.api.ChartOptions;
 import com.github.highchart.api.Point;
 import com.github.highchart.api.Series;
-import com.github.highchart.api.datetime.DateTimeLabelFormats.TimeUnit;
+import com.github.highchart.api.format.DateTimeLabelFormats.TimeUnit;
 import com.github.highchart.api.shared.SeriesType;
 
 public class TestSplineIrregularTime {
