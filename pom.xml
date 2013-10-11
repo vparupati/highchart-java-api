@@ -7,7 +7,7 @@
 		<version>0.1</version>
 	</parent>
 	<artifactId>highchart-java-api</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>Highchart java API</name>
 	<description>A Java API to generate highchart json on the server side.</description>
 	<url>http://www.pvanassen.nl</url>
@@ -35,7 +35,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:pvanassen/highchart-java-api.git</connection>
 		<developerConnection>scm:git:git@github.com:pvanassen/highchart-java-api.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>highchart-java-api-0.1</tag>
 		<url>https://github.com/pvanassen/highchart-java-api</url>
 	</scm>
 	<issueManagement>
