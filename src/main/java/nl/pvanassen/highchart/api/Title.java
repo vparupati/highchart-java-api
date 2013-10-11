@@ -20,7 +20,7 @@ public class Title extends BaseObject {
 
     public Title() {
         style = null;
-        text = new String( "" );
+        text = "";
     }
 
     public int getMargin() {

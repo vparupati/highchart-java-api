@@ -8,7 +8,7 @@ import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.GsonBuilder;
 
-public class GsonHelper {
+public final class GsonHelper {
 
     private static final String     yyyy_MM_dd  = "yyyyMMdd";
 

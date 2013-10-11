@@ -17,7 +17,7 @@ public class TestColumnBasic {
         // http://highcharts.com/demo/column-basic
         ChartOptions chartOptions = new ChartOptions();
 
-        chartOptions.getChart().setDefaultSeriesType( SeriesType.column ).setWidth( 800 ).setHeight( 400 ).setMarginLeft( 70 ).setMarginTop( 80 );
+        chartOptions.getChart().setDefaultSeriesType( SeriesType.COLUMN ).setWidth( 800 ).setHeight( 400 ).setMarginLeft( 70 ).setMarginTop( 80 );
 
         // titles
         chartOptions.getTitle().setText( "Monthly Average Rainfall" );
