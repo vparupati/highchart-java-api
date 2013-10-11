@@ -18,7 +18,7 @@ public class TestSplineIrregularTime {
     public void testSplineIrregularTime() {
         // http://highcharts.com/demo/spline-irregular-time
         ChartOptions chartOptions = new ChartOptions();
-        chartOptions.getChart().setWidth( 800 ).setHeight( 600 ).setDefaultSeriesType( SeriesType.spline ).setMarginLeft( 70 ).setMarginTop( 80 );
+        chartOptions.getChart().setWidth( 800 ).setHeight( 600 ).setDefaultSeriesType( SeriesType.SPLINE ).setMarginLeft( 70 ).setMarginTop( 80 );
 
         // titles
         chartOptions.getTitle().setText( "Snow depth in the Vikjafjellet mountain, Norway" );

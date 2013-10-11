@@ -1,61 +1,61 @@
 package nl.pvanassen.highchart.api.shared;
 
 public enum SeriesType {
-    table {
+    TABLE {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitTable( this, in );
         }
     },
-    column {
+    COLUMN {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitColumn( this, in );
         }
     },
-    area {
+    AREA {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitArea( this, in );
         }
     },
-    areaspline {
+    AREASPLINE {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitAreaspline( this, in );
         }
     },
-    bar {
+    BAR {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitBar( this, in );
         }
     },
-    line {
+    LINE {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitLine( this, in );
         }
     },
-    pie {
+    PIE {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitPie( this, in );
         }
     },
-    scatter {
+    SCATTER {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitScatter( this, in );
         }
     },
-    spline {
+    SPLINE {
         @Override
-        public <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in ) {
+        public <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in ) {
             return visitor.visitSpline( this, in );
         }
     };
 
-    public abstract <IN, OUT> OUT accept( SeriesTypeVisitor<IN, OUT> visitor, IN in );
+    public abstract <I, O> O accept( SeriesTypeVisitor<I, O> visitor, I in );
 
 }

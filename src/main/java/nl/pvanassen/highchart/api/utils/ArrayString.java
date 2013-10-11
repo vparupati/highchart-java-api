@@ -9,9 +9,9 @@ public class ArrayString extends JsonArray<String> {
 
     public String join( String separator ) {
         StringBuffer sb = new StringBuffer();
-        int size;
+        int size = length();
 
-        if ( ( size = length() ) < 1 ) {
+        if ( size  < 1 ) {
             return sb.toString();
         }
 
