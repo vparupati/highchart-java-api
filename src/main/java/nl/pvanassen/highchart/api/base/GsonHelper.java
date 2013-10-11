@@ -10,7 +10,7 @@ import com.google.gson.GsonBuilder;
 
 public final class GsonHelper {
 
-    private static final String     yyyy_MM_dd  = "yyyyMMdd";
+    private static final String     DATE_FORMAT  = "yyyyMMdd";
 
     private static final String     USER_OBJECT = "userObject";
 
@@ -25,7 +25,7 @@ public final class GsonHelper {
     private GsonHelper() {
         gsonBuilder = new GsonBuilder().registerTypeAdapter( DateTimeLabelFormats.class, new DateTimeLabelFormatsSerializer() ) //
         .registerTypeAdapter( Style.class, new StyleSerializer() )//
-        .setDateFormat( yyyy_MM_dd )//
+        .setDateFormat( DATE_FORMAT )//
         .setExclusionStrategies( new ExclusionStrategy() {
 
             @Override
