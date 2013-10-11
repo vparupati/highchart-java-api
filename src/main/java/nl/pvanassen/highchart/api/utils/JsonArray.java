@@ -12,10 +12,6 @@ public class JsonArray<E> extends ArrayList<E> {
 
     private static final long serialVersionUID = 1L;
 
-    public JsonArray() {
-        // list = new ArrayList<E> ();
-    }
-
     public E getItem( int index ) {
         return get( index );
     }
