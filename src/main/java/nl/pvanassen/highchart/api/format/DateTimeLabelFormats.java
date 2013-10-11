@@ -7,7 +7,7 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 
 public class DateTimeLabelFormats extends BaseObject {
     public enum TimeUnit {
-        second, minute, hour, day, week, month, year;
+        SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, YEAR;
     }
 
     private Map<TimeUnit, String> formats;

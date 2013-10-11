@@ -25,7 +25,7 @@ public class TestSplineIrregularTime {
         chartOptions.getSubtitle().setText( "An example of irregular time data in Highcharts JS" );
 
         // axis
-        chartOptions.getXAxis().setType( "datetime" ).getDateTimeLabelFormats().set( TimeUnit.month, "%e. %b" ).set( TimeUnit.year, "%b" );
+        chartOptions.getXAxis().setType( "datetime" ).getDateTimeLabelFormats().set( TimeUnit.MONTH, "%e. %b" ).set( TimeUnit.YEAR, "%b" );
         chartOptions.getYAxis().setMin( 0 ).getTitle().setText( "Snow depth (m)" );
 
         // plotOptions
