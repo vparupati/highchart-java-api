@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.pvanassen</groupId>
 	<artifactId>highchart-java-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
 	<name>Highchart java API</name>
 	<dependencies>
 		<dependency>
@@ -18,6 +18,30 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<url>http://www.pvanassen.nl</url>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>pvanassen</id>
+			<name>Paul van Assen</name>
+			<email>source@pvanassen.nl</email>
+		</developer>
+	</developers>
+	<prerequisites>
+		<maven>3.0.4</maven>
+	</prerequisites>
+	<scm>
+		<connection>scm:git:git@github.com:pvanassen/highchart-java-api.git</connection>
+		<developerConnection>scm:git:git@github.com:pvanassen/highchart-java-api.git</developerConnection>
+		<url>https://github.com/pvanassen/highchart-java-api</url>
+		<tag>HEAD</tag>
+	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -41,4 +65,17 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>A Java API to generate highchart json on the server side. </description>
+	<organization>
+		<name>Paul van Assen</name>
+		<url>http://www.pvanassen.nl</url>
+	</organization>
+	<issueManagement>
+		<url>https://github.com/pvanassen/highchart-java-api/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+	<ciManagement>
+		<url>http://build.pvanassen.nl</url>
+		<system>Jenkins</system>
+	</ciManagement>
 </project>
