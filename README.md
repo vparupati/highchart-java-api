@@ -1,7 +1,18 @@
-Highchart-java-api
+Highchart java api
 =============
 
 Java API for generating highchart JSON. This API is based on the work of one2team. (https://github.com/one2team/highcharts-serverside-export)
+
+Maven
+-----
+Version 0.1 of this api is available in the central maven repository: 
+```Xml
+<dependency>
+  <groupId>nl.pvanassen</groupId>
+  <artifactId>highchart-api</artifactId>
+  <version>0.1</version>
+</dependency>
+```
 
 Copyright and License
 ---------------------
