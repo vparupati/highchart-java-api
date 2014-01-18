@@ -5,11 +5,13 @@ import nl.pvanassen.highchart.api.Point;
 import nl.pvanassen.highchart.api.Series;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestPieChart {
     private static final String pieJson = "{\"chart\":{\"width\":800,\"height\":600,\"marginLeft\":70,\"marginTop\":80},\"plotOptions\":{\"area\":{\"borderWidth\":0},\"areaspline\":{\"borderWidth\":0},\"line\":{\"borderWidth\":0},\"pie\":{\"dataLabels\":{\"color\":\"#000000\",\"enabled\":true,\"formatter\":\"function() {return \\u0027\\u003cb\\u003e\\u0027+ this.point.name +\\u0027\\u003c/b\\u003e: \\u0027+ this.y +\\u0027 %\\u0027;}\",\"align\":\"center\",\"rotation\":0.0},\"allowPointSelect\":true,\"borderWidth\":0},\"series\":{\"borderWidth\":0},\"spline\":{\"borderWidth\":0},\"column\":{\"borderWidth\":0},\"bar\":{\"borderWidth\":0}},\"series\":[{\"data\":[{\"y\":45.0,\"name\":\"Firefox\"},{\"y\":26.8,\"name\":\"IE\"},{\"y\":12.8,\"selected\":true,\"sliced\":true,\"name\":\"Chrome\"},{\"y\":8.5,\"name\":\"Safari\"},{\"y\":6.2,\"name\":\"Opera\"},{\"y\":0.7,\"name\":\"Others\"}],\"name\":\"Browser share\",\"type\":\"pie\"}],\"title\":{\"text\":\"Browser market shares at a specific website, 2010\"}}";
 
+    @Ignore
     @Test
     public void createPieChart() {
         // http://highcharts.com/demo/pie-basic
