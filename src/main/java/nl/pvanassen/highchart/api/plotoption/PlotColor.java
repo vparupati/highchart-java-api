@@ -21,7 +21,7 @@ public class PlotColor {
         }
         Object[] objs = new Object[2];
         objs[0] = stops.size();
-        objs[1] = color;
+        objs[1] = Integer.toHexString(color.getRGB());;
         stops.add(objs);
     }
     
