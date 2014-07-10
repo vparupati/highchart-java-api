@@ -18,9 +18,9 @@ public class Chart extends BaseObject {
 
     private String  defaultSeriesType;
 
-    private int     marginLeft;
+    private Integer marginLeft;
 
-    private int     marginTop;
+    private Integer marginTop;
 
     public String getBackgroundColor() {
         return backgroundColor;
