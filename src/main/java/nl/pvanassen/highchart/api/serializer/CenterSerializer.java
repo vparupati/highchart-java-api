@@ -4,11 +4,7 @@ import java.lang.reflect.Type;
 
 import nl.pvanassen.highchart.api.serie.SeriesCenter;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
+import com.google.gson.*;
 
 public class CenterSerializer implements JsonSerializer<SeriesCenter> {
 

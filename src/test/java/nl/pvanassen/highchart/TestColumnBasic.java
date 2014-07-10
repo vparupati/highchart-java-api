@@ -7,7 +7,6 @@ import nl.pvanassen.highchart.api.shared.SeriesType;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestColumnBasic {

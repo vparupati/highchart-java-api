@@ -1,6 +1,5 @@
 package nl.pvanassen.highchart.api.plotoption;
 
-import javax.xml.bind.annotation.*;
 
 public class PlotGradient {
     private int x1;
