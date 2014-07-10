@@ -1,6 +1,7 @@
 package nl.pvanassen.highchart;
 
 import java.util.Calendar;
+import java.util.TimeZone;
 
 import nl.pvanassen.highchart.api.ChartOptions;
 import nl.pvanassen.highchart.api.Point;
@@ -18,6 +19,7 @@ public class TestSplineIrregularTime {
 
     @Test
     public void testSplineIrregularTime() {
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT+1"));
         // http://highcharts.com/demo/spline-irregular-time
         ChartOptions chartOptions = new ChartOptions();
         chartOptions.getChart().setWidth( 800 ).setHeight( 600 ).setDefaultSeriesType( SeriesType.SPLINE ).setMarginLeft( 70 ).setMarginTop( 80 );
