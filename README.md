@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pvanassen/highchart-java-api.png?branch=master)](https://travis-ci.org/pvanassen/highchart-java-api)
+[![Build Status](https://travis-ci.org/geckoboard-java-api/highchart-java-api.svg?branch=master)](https://travis-ci.org/geckoboard-java-api/highchart-java-api)
 [![Coverage Status](https://coveralls.io/repos/pvanassen/highchart-java-api/badge.png)](https://coveralls.io/r/pvanassen/highchart-java-api)
 
 Highchart java api
