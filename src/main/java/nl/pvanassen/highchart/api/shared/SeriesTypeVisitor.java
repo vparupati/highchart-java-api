@@ -1,23 +1,23 @@
 package nl.pvanassen.highchart.api.shared;
 
-public interface SeriesTypeVisitor<IN, OUT> {
+public interface SeriesTypeVisitor<I, O> {
 
-    OUT visitArea( SeriesType type, IN in );
+    O visitArea( SeriesType type, I in );
 
-    OUT visitAreaspline( SeriesType type, IN in );
+    O visitAreaspline( SeriesType type, I in );
 
-    OUT visitBar( SeriesType type, IN in );
+    O visitBar( SeriesType type, I in );
 
-    OUT visitColumn( SeriesType type, IN in );
+    O visitColumn( SeriesType type, I in );
 
-    OUT visitLine( SeriesType type, IN in );
+    O visitLine( SeriesType type, I in );
 
-    OUT visitPie( SeriesType type, IN in );
+    O visitPie( SeriesType type, I in );
 
-    OUT visitScatter( SeriesType type, IN in );
+    O visitScatter( SeriesType type, I in );
 
-    OUT visitSpline( SeriesType type, IN in );
+    O visitSpline( SeriesType type, I in );
 
-    OUT visitTable( SeriesType type, IN in );
+    O visitTable( SeriesType type, I in );
 
 }

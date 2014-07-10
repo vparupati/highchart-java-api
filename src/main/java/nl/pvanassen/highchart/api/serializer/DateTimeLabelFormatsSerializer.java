@@ -14,7 +14,7 @@ public class DateTimeLabelFormatsSerializer extends Serializer<DateTimeLabelForm
         Map<TimeUnit, String> map = instance.getFormats();
         Map<String, String> r = new HashMap<String, String>();
         for ( Entry<TimeUnit, String> e : map.entrySet() ) {
-            r.put( e.getKey().name(), e.getValue() );
+            r.put( e.getKey().name().toLowerCase(), e.getValue() );
         }
         return r;
     }

@@ -64,7 +64,7 @@ public class Chart extends BaseObject {
     }
 
     public Chart setDefaultSeriesType( SeriesType type ) {
-        defaultSeriesType = type.name();
+        defaultSeriesType = type.name().toLowerCase();
         return this;
     }
 

@@ -72,7 +72,6 @@ public class Series extends BaseObject {
     }
 
     public String getType() {
-        System.out.println( "series.type " + type );
         return type;
     }
 

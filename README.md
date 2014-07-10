@@ -1,7 +1,21 @@
-Highchart-java-api
+[![Build Status](https://travis-ci.org/pvanassen/highchart-java-api.png?branch=master)](https://travis-ci.org/pvanassen/highchart-java-api)
+[![Coverage Status](https://coveralls.io/repos/pvanassen/highchart-java-api/badge.png)](https://coveralls.io/r/pvanassen/highchart-java-api)
+
+Highchart java api
 =============
 
 Java API for generating highchart JSON. This API is based on the work of one2team. (https://github.com/one2team/highcharts-serverside-export)
+
+Maven
+-----
+Version 0.1 of this api is available in the central maven repository: 
+```Xml
+<dependency>
+  <groupId>nl.pvanassen</groupId>
+  <artifactId>highchart-api</artifactId>
+  <version>0.1</version>
+</dependency>
+```
 
 Copyright and License
 ---------------------

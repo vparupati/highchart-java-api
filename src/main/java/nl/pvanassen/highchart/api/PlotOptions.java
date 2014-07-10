@@ -11,51 +11,72 @@ import nl.pvanassen.highchart.api.plotoption.PlotOptionsSeries;
 public class PlotOptions extends BaseObject {
 
     @XmlElement
-    private final PlotOptionsSeries area, areaspline, line, pie, series,
-            spline;
-
-    private PlotOptionsSeries       column, bar;
+    private PlotOptionsSeries area;
+    private PlotOptionsSeries areaspline;
+    private PlotOptionsSeries line;
+    private PlotOptionsSeries pie;
+    private PlotOptionsSeries series;
+    private PlotOptionsSeries spline;
+    private PlotOptionsSeries column;
+    private PlotOptionsSeries bar;
 
     public PlotOptions() {
-        area = new PlotOptionsSeries();
-        areaspline = new PlotOptionsSeries();
-        bar = new PlotOptionsSeries();
-        column = new PlotOptionsSeries();
-        line = new PlotOptionsSeries();
-        pie = new PlotOptionsSeries();
-        series = new PlotOptionsSeries();
-        spline = new PlotOptionsSeries();
+        super();
     }
 
     public PlotOptionsSeries getArea() {
+        if (area == null) {
+            area = new PlotOptionsSeries();
+        }
         return area;
     }
 
     public PlotOptionsSeries getAreaspline() {
+        if (areaspline == null) {
+            areaspline = new PlotOptionsSeries();
+        }
         return areaspline;
     }
 
     public PlotOptionsSeries getBar() {
+        if (bar == null) {
+            bar = new PlotOptionsSeries();
+        }
         return bar;
     }
 
     public PlotOptionsSeries getColumn() {
+        if (column == null) {
+            column = new PlotOptionsSeries();
+        }
         return column;
     }
 
     public PlotOptionsSeries getLine() {
+        if (line == null) {
+            line = new PlotOptionsSeries();
+        }
         return line;
     }
 
     public PlotOptionsSeries getPie() {
+        if (pie == null) {
+            pie = new PlotOptionsSeries();
+        }
         return pie;
     }
 
     public PlotOptionsSeries getSeries() {
+        if (series == null) {
+            series = new PlotOptionsSeries();
+        }
         return series;
     }
 
     public PlotOptionsSeries getSpline() {
+        if (spline == null) {
+            spline = new PlotOptionsSeries();
+        }
         return spline;
     }
 }

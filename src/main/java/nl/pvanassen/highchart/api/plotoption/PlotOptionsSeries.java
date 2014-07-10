@@ -7,39 +7,42 @@ import javax.xml.bind.annotation.XmlType;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
 
-@XmlType( namespace = "plotoptions" )
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlType(namespace = "plotoptions")
+@XmlAccessorType(XmlAccessType.NONE)
 public class PlotOptionsSeries extends BaseObject {
 
-    @XmlElement( type = PlotOptionsStates.class )
-    private PlotOptionsStates     states;
+    @XmlElement(type = PlotOptionsStates.class)
+    private PlotOptionsStates states;
 
     private PlotOptionsDataLabels dataLabels;
 
-    private String                stacking;
+    private String stacking;
 
-    private PlotOptionsMarker     marker;
-
-    @XmlElement
-    private Boolean               allowPointSelect;
+    private PlotOptionsMarker marker;
 
     @XmlElement
-    private Boolean               shadow;
+    private Boolean allowPointSelect;
 
     @XmlElement
-    private Integer               lineWidth;
+    private Boolean shadow;
 
     @XmlElement
-    private Double                fillOpacity;
+    private Integer lineWidth;
 
-    private int                   borderWidth;
+    @XmlElement
+    private Double fillOpacity;
+
+    private Integer borderWidth;
+    
+    @XmlElement
+    private PlotColor fillColor;
 
     public int getBorderWidth() {
         return borderWidth;
     }
 
     public PlotOptionsDataLabels getDataLabels() {
-        if ( dataLabels == null ) {
+        if (dataLabels == null) {
             dataLabels = new PlotOptionsDataLabels();
         }
         return dataLabels;
@@ -54,7 +57,7 @@ public class PlotOptionsSeries extends BaseObject {
     }
 
     public PlotOptionsMarker getMarker() {
-        if ( marker == null ) {
+        if (marker == null) {
             marker = new PlotOptionsMarker();
         }
         return marker;
@@ -65,7 +68,7 @@ public class PlotOptionsSeries extends BaseObject {
     }
 
     public PlotOptionsStates getStates() {
-        if ( states == null ) {
+        if (states == null) {
             states = new PlotOptionsStates();
         }
         return states;
@@ -79,39 +82,47 @@ public class PlotOptionsSeries extends BaseObject {
         return shadow;
     }
 
-    public PlotOptionsSeries setAllowPointSelect( boolean allowPointSelect ) {
+    public PlotOptionsSeries setAllowPointSelect(boolean allowPointSelect) {
         this.allowPointSelect = allowPointSelect;
         return this;
     }
 
-    public PlotOptionsSeries setBorderWidth( int borderWidth ) {
+    public PlotOptionsSeries setBorderWidth(int borderWidth) {
         this.borderWidth = borderWidth;
         return this;
     }
 
-    public PlotOptionsSeries setFillOpacity( double fillOpacity ) {
+    public PlotOptionsSeries setFillOpacity(double fillOpacity) {
         this.fillOpacity = fillOpacity;
         return this;
     }
 
-    public PlotOptionsSeries setLineWidth( int lineWidth ) {
+    public PlotOptionsSeries setLineWidth(int lineWidth) {
         this.lineWidth = lineWidth;
         return this;
     }
 
-    public PlotOptionsSeries setShadow( boolean shadow ) {
+    public PlotOptionsSeries setShadow(boolean shadow) {
         this.shadow = shadow;
         return this;
     }
 
     @XmlElement
-    public PlotOptionsSeries setStacking( String stacking ) {
+    public PlotOptionsSeries setStacking(String stacking) {
         this.stacking = stacking;
         return this;
     }
 
-    public PlotOptionsSeries setStates( PlotOptionsStates states ) {
+    public PlotOptionsSeries setStates(PlotOptionsStates states) {
         this.states = states;
         return this;
     }
+ 
+    public PlotColor getFillColor() {
+        if (fillColor == null) {
+            fillColor =  new PlotColor();
+        }
+        return fillColor;
+    }
+    
 }
