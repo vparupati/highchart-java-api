@@ -4,8 +4,8 @@ import javax.xml.bind.annotation.*;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
 
-@XmlAccessorType( XmlAccessType.NONE )
-@XmlType( namespace = "axis" )
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(namespace = "axis")
 public class AxisLabels extends BaseObject {
 
     @XmlElement
@@ -22,12 +22,12 @@ public class AxisLabels extends BaseObject {
         return rotation;
     }
 
-    public AxisLabels setAlign( String align ) {
+    public AxisLabels setAlign(String align) {
         this.align = align;
         return this;
     }
 
-    public AxisLabels setRotation( double rotation ) {
+    public AxisLabels setRotation(double rotation) {
         this.rotation = rotation;
         return this;
     }

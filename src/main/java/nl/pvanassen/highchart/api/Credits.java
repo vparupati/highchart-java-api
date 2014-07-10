@@ -10,7 +10,7 @@ public class Credits extends BaseObject {
         return enabled;
     }
 
-    public Credits setEnabled( boolean enabled ) {
+    public Credits setEnabled(boolean enabled) {
         this.enabled = enabled;
         return this;
     }

@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
 
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class Point extends BaseObject {
 
     @XmlElement
@@ -17,9 +17,9 @@ public class Point extends BaseObject {
 
     private Boolean selected, sliced;
 
-    private String  color;
+    private String color;
 
-    private String  name;
+    private String name;
 
     public Point() {
     }
@@ -48,32 +48,32 @@ public class Point extends BaseObject {
         return sliced;
     }
 
-    public Point setColor( String color ) {
+    public Point setColor(String color) {
         this.color = color;
         return this;
     }
 
-    public Point setName( String name ) {
+    public Point setName(String name) {
         this.name = name;
         return this;
     }
 
-    public Point setSelected( boolean selected ) {
+    public Point setSelected(boolean selected) {
         this.selected = selected;
         return this;
     }
 
-    public Point setSliced( boolean sliced ) {
+    public Point setSliced(boolean sliced) {
         this.sliced = sliced;
         return this;
     }
 
-    public Point setX( double x ) {
+    public Point setX(double x) {
         this.x = x;
         return this;
     }
 
-    public Point setY( double y ) {
+    public Point setY(double y) {
         this.y = y;
         return this;
     }

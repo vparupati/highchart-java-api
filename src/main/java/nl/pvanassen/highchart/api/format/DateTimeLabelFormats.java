@@ -6,6 +6,7 @@ import java.util.Map;
 import nl.pvanassen.highchart.api.base.BaseObject;
 
 public class DateTimeLabelFormats extends BaseObject {
+
     public enum TimeUnit {
         SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, YEAR;
     }
@@ -16,19 +17,19 @@ public class DateTimeLabelFormats extends BaseObject {
         formats = null;
     }
 
-    public String getFormat( TimeUnit unit ) {
-        return ( formats != null ) ? formats.get( unit ) : null;
+    public String getFormat(TimeUnit unit) {
+        return formats != null ? formats.get(unit) : null;
     }
 
     public Map<TimeUnit, String> getFormats() {
         return formats;
     }
 
-    public DateTimeLabelFormats set( TimeUnit unit, String format ) {
-        if ( formats == null ) {
+    public DateTimeLabelFormats set(TimeUnit unit, String format) {
+        if (formats == null) {
             formats = new HashMap<TimeUnit, String>();
         }
-        formats.put( unit, format );
+        formats.put(unit, format);
         return this;
     }
 

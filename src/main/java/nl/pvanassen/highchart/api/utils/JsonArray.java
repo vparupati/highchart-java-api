@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class JsonArray<E> extends ArrayList<E> {
 
     private static final long serialVersionUID = 1L;
 
-    public E getItem( int index ) {
-        return get( index );
+    public E getItem(int index) {
+        return get(index);
     }
 
     public Integer getLength() {
@@ -24,32 +24,32 @@ public class JsonArray<E> extends ArrayList<E> {
         return size();
     }
 
-    public JsonArray<E> pushElement( E value ) {
-        pushItem( value );
+    public JsonArray<E> pushElement(E value) {
+        pushItem(value);
         return this;
     }
 
-    public void pushItem( E value ) {
-        add( value );
+    public void pushItem(E value) {
+        add(value);
     }
 
-    public JsonArray<E> setElement( int index, E value ) {
-        setItem( index, value );
+    public JsonArray<E> setElement(int index, E value) {
+        setItem(index, value);
         return this;
     }
 
-    public void setItem( int index, E value ) {
-        if ( size() > index ) {
-            set( index, value );
+    public void setItem(int index, E value) {
+        if (size() > index) {
+            set(index, value);
         }
-        else if ( size() == index ) {
-            add( index, value );
+        else if (size() == index) {
+            add(index, value);
         }
         else {
-            while ( size() < index ) {
-                add( null );
+            while (size() < index) {
+                add(null);
             }
-            add( index, value );
+            add(index, value);
         }
     }
 }

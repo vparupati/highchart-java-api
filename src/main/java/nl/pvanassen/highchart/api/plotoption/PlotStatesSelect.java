@@ -6,11 +6,12 @@ import javax.xml.bind.annotation.XmlElement;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
 
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class PlotStatesSelect extends BaseObject {
-    private String  color;
 
-    private String  borderColor;
+    private String color;
+
+    private String borderColor;
 
     @XmlElement
     private Integer borderWidth;
@@ -27,17 +28,17 @@ public class PlotStatesSelect extends BaseObject {
         return color;
     }
 
-    public PlotStatesSelect setBorderColor( String borderColor ) {
+    public PlotStatesSelect setBorderColor(String borderColor) {
         this.borderColor = borderColor;
         return this;
     }
 
-    public PlotStatesSelect setBorderWidth( int borderWidth ) {
+    public PlotStatesSelect setBorderWidth(int borderWidth) {
         this.borderWidth = borderWidth;
         return this;
     }
 
-    public PlotStatesSelect setColor( String color ) {
+    public PlotStatesSelect setColor(String color) {
         this.color = color;
         return this;
     }

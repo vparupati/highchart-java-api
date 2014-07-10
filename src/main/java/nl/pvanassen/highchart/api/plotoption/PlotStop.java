@@ -3,7 +3,9 @@ package nl.pvanassen.highchart.api.plotoption;
 import java.awt.Color;
 
 public class PlotStop {
+
     private final int pos;
+
     private final Color color;
 
     PlotStop(int pos, Color color) {

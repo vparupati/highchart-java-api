@@ -7,7 +7,7 @@ import nl.pvanassen.highchart.api.base.Style;
 public class StyleSerializer extends Serializer<Style> {
 
     @Override
-    public Map<String, String> getProperties( Style instance ) {
+    public Map<String, String> getProperties(Style instance) {
         return instance.getProperties();
     }
 

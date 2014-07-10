@@ -7,17 +7,24 @@ import javax.xml.bind.annotation.XmlElement;
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.plotoption.PlotOptionsSeries;
 
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class PlotOptions extends BaseObject {
 
     @XmlElement
     private PlotOptionsSeries area;
+
     private PlotOptionsSeries areaspline;
+
     private PlotOptionsSeries line;
+
     private PlotOptionsSeries pie;
+
     private PlotOptionsSeries series;
+
     private PlotOptionsSeries spline;
+
     private PlotOptionsSeries column;
+
     private PlotOptionsSeries bar;
 
     public PlotOptions() {

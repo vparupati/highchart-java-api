@@ -4,9 +4,9 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 
 public class PlotOptionsMarker extends BaseObject {
 
-    private String           symbol;
+    private String symbol;
 
-    private boolean          enabled;
+    private boolean enabled;
 
     private PlotMarkerStates states;
 
@@ -14,7 +14,7 @@ public class PlotOptionsMarker extends BaseObject {
     }
 
     public PlotMarkerStates getStates() {
-        if ( states == null ) {
+        if (states == null) {
             states = new PlotMarkerStates();
         }
         return states;
@@ -28,12 +28,12 @@ public class PlotOptionsMarker extends BaseObject {
         return enabled;
     }
 
-    public PlotOptionsMarker setEnabled( boolean enabled ) {
+    public PlotOptionsMarker setEnabled(boolean enabled) {
         this.enabled = enabled;
         return this;
     }
 
-    public PlotOptionsMarker setSymbol( String symbol ) {
+    public PlotOptionsMarker setSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }

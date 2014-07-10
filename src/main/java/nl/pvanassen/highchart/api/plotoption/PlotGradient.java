@@ -1,10 +1,13 @@
 package nl.pvanassen.highchart.api.plotoption;
 
-
 public class PlotGradient {
+
     private int x1;
+
     private int y1;
+
     private int x2;
+
     private int y2;
 
     public int getX1() {

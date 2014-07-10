@@ -18,35 +18,36 @@ public final class GsonHelper {
     private static final GsonHelper INSTANCE = new GsonHelper();
 
     static String toJson(Object object) {
-        return INSTANCE.gsonBuilder.create().toJson(object);
+        return GsonHelper.INSTANCE.gsonBuilder.create().toJson(object);
     }
 
     private final GsonBuilder gsonBuilder;
 
     private GsonHelper() {
         gsonBuilder = new GsonBuilder()
-                .registerTypeAdapter(DateTimeLabelFormats.class, new DateTimeLabelFormatsSerializer()) //
-                .registerTypeAdapter(Style.class, new StyleSerializer())//
-                .setDateFormat(DATE_FORMAT)//
-                .setExclusionStrategies(new ExclusionStrategy() {
+        .registerTypeAdapter(DateTimeLabelFormats.class, new DateTimeLabelFormatsSerializer()) //
+        .registerTypeAdapter(Style.class, new StyleSerializer())//
+        .setDateFormat(GsonHelper.DATE_FORMAT)//
+        .setExclusionStrategies(new ExclusionStrategy() {
+
+            @Override
+            public boolean shouldSkipClass(Class<?> arg0) {
+                return false;
+            }
+
+            @Override
+            public boolean shouldSkipField(FieldAttributes attributes) {
+                return attributes.getName().equals(GsonHelper.USER_OBJECT);
+            }
+
+        }).registerTypeAdapter(Double.class, new JsonSerializer<Double>() {
 
                     @Override
-                    public boolean shouldSkipClass(Class<?> arg0) {
-                        return false;
-                    }
+            public JsonElement serialize(Double originalValue, Type typeOf, JsonSerializationContext context) {
+                BigDecimal bigValue = BigDecimal.valueOf(originalValue);
 
-                    @Override
-                    public boolean shouldSkipField(FieldAttributes attributes) {
-                        return attributes.getName().equals(USER_OBJECT);
-                    }
-
-                }).registerTypeAdapter(Double.class,  new JsonSerializer<Double>() {
-                    @Override
-                    public JsonElement serialize(Double originalValue, Type typeOf, JsonSerializationContext context) {
-                        BigDecimal bigValue = BigDecimal.valueOf(originalValue);
-
-                        return new JsonPrimitive(bigValue.toPlainString());
-                    }
-                });
+                return new JsonPrimitive(bigValue.toPlainString());
+            }
+        });
     }
 }

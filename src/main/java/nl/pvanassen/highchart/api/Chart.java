@@ -4,9 +4,10 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.shared.SeriesType;
 
 public class Chart extends BaseObject {
-    private String  zoomType;
 
-    private String  backgroundColor;
+    private String zoomType;
+
+    private String backgroundColor;
 
     private Integer marginRight;
 
@@ -16,7 +17,7 @@ public class Chart extends BaseObject {
 
     private Integer height;
 
-    private String  defaultSeriesType;
+    private String defaultSeriesType;
 
     private Integer marginLeft;
 
@@ -58,47 +59,47 @@ public class Chart extends BaseObject {
         return zoomType;
     }
 
-    public Chart setBackgroundColor( String backgroundColor ) {
+    public Chart setBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
 
-    public Chart setDefaultSeriesType( SeriesType type ) {
+    public Chart setDefaultSeriesType(SeriesType type) {
         defaultSeriesType = type.name().toLowerCase();
         return this;
     }
 
-    public Chart setHeight( int height ) {
+    public Chart setHeight(int height) {
         this.height = height;
         return this;
     }
 
-    public Chart setMarginBottom( int marginBottom ) {
+    public Chart setMarginBottom(int marginBottom) {
         this.marginBottom = marginBottom;
         return this;
     }
 
-    public Chart setMarginLeft( int marginLeft ) {
+    public Chart setMarginLeft(int marginLeft) {
         this.marginLeft = marginLeft;
         return this;
     }
 
-    public Chart setMarginRight( int marginRight ) {
+    public Chart setMarginRight(int marginRight) {
         this.marginRight = marginRight;
         return this;
     }
 
-    public Chart setMarginTop( int marginTop ) {
+    public Chart setMarginTop(int marginTop) {
         this.marginTop = marginTop;
         return this;
     }
 
-    public Chart setWidth( int width ) {
+    public Chart setWidth(int width) {
         this.width = width;
         return this;
     }
 
-    public Chart setZoomType( String zoomType ) {
+    public Chart setZoomType(String zoomType) {
         this.zoomType = zoomType;
         return this;
     }

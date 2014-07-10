@@ -6,8 +6,8 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.label.LabelsItems;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlAccessorType( XmlAccessType.NONE )
-@XmlType( namespace = "chart-options" )
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(namespace = "chart-options")
 public class Labels extends BaseObject {
 
     @XmlTransient
@@ -18,7 +18,7 @@ public class Labels extends BaseObject {
 
     @XmlTransient
     public JsonArray<LabelsItems> getItems() {
-        if ( items == null ) {
+        if (items == null) {
             items = new JsonArray<LabelsItems>();
         }
 

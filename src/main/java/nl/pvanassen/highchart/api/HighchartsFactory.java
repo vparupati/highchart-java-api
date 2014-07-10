@@ -1,6 +1,5 @@
 package nl.pvanassen.highchart.api;
 
-
 public class HighchartsFactory {
 
     public HighchartsFactory() {

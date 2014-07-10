@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
 
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class Tooltip extends BaseObject {
 
     @XmlElement
@@ -23,12 +23,12 @@ public class Tooltip extends BaseObject {
         return shared;
     }
 
-    public Tooltip setCrosshairs( boolean b ) {
+    public Tooltip setCrosshairs(boolean b) {
         crosshairs = b;
         return this;
     }
 
-    public Tooltip setShared( boolean shared ) {
+    public Tooltip setShared(boolean shared) {
         this.shared = shared;
         return this;
     }

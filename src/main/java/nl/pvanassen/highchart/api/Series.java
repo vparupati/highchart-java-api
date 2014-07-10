@@ -7,48 +7,48 @@ import nl.pvanassen.highchart.api.plotoption.PlotMarkerStates;
 import nl.pvanassen.highchart.api.serie.SeriesCenter;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlAccessorType( XmlAccessType.NONE )
-@XmlType( namespace = "chartoptions" )
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(namespace = "chartoptions")
 public class Series extends BaseObject {
 
-    @XmlElement( type = PlotMarkerStates.class )
+    @XmlElement(type = PlotMarkerStates.class)
     private PlotMarkerStates states;
 
-    @XmlElements( @XmlElement( name = "data", type = Point.class ) )
-    private Object           data;
+    @XmlElements(@XmlElement(name = "data", type = Point.class))
+    private Object data;
 
     @XmlElement
-    private String           color;
+    private String color;
 
     @XmlElement
-    private String           name;
+    private String name;
 
     @XmlElement
-    private String           type;
+    private String type;
 
     @XmlElement
-    private String           size;
+    private String size;
 
-    private SeriesCenter     center;
+    private SeriesCenter center;
 
     public String getCenterX() {
-        return ( center != null ) ? center.getX() : null;
+        return center != null ? center.getX() : null;
     }
 
     public String getCenterY() {
-        return ( center != null ) ? center.getY() : null;
+        return center != null ? center.getY() : null;
     }
 
     public String getColor() {
         return color;
     }
 
-    @SuppressWarnings( "unchecked" )
+    @SuppressWarnings("unchecked")
     public JsonArray<Point> getData() {
-        if ( data == null ) {
+        if (data == null) {
             data = new JsonArray<Point>();
         }
-        return ( JsonArray<Point> ) data;
+        return (JsonArray<Point>) data;
     }
 
     public String getName() {
@@ -60,7 +60,7 @@ public class Series extends BaseObject {
     }
 
     public PlotMarkerStates getStates() {
-        if ( states == null ) {
+        if (states == null) {
             states = new PlotMarkerStates();
         }
         return states;
@@ -70,42 +70,42 @@ public class Series extends BaseObject {
         return type;
     }
 
-    public Series setCenter( String x, String y ) {
-        if ( center == null ) {
+    public Series setCenter(String x, String y) {
+        if (center == null) {
             center = new SeriesCenter();
         }
-        center.setX( x );
-        center.setY( y );
+        center.setX(x);
+        center.setY(y);
         return this;
     }
 
-    public Series setColor( String color ) {
+    public Series setColor(String color) {
         this.color = color;
         return this;
     }
 
     @XmlTransient
-    public Series setData( JsonArray<Point> data ) {
+    public Series setData(JsonArray<Point> data) {
         this.data = data;
         return this;
     }
 
-    public Series setName( String name ) {
+    public Series setName(String name) {
         this.name = name;
         return this;
     }
 
-    public Series setSize( String size ) {
+    public Series setSize(String size) {
         this.size = size;
         return this;
     }
 
-    public Series setStates( PlotMarkerStates states ) {
+    public Series setStates(PlotMarkerStates states) {
         this.states = states;
         return this;
     }
 
-    public Series setType( String type ) {
+    public Series setType(String type) {
         this.type = type;
         return this;
     }

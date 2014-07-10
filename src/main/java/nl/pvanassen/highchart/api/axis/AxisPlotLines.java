@@ -4,17 +4,17 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 
 public class AxisPlotLines extends BaseObject {
 
-    private int               zindex;
+    private int zindex;
 
-    private int               width;
+    private int width;
 
-    private double            value;
+    private double value;
 
-    private String            id;
+    private String id;
 
-    private String            color;
+    private String color;
 
-    private String            dashStyle;
+    private String dashStyle;
 
     private AxisPlotLineLabel label;
 
@@ -50,37 +50,37 @@ public class AxisPlotLines extends BaseObject {
         return zindex;
     }
 
-    public AxisPlotLines setColor( String color ) {
+    public AxisPlotLines setColor(String color) {
         this.color = color;
         return this;
     }
 
-    public AxisPlotLines setDashStyle( String dashStyle ) {
+    public AxisPlotLines setDashStyle(String dashStyle) {
         this.dashStyle = dashStyle;
         return this;
     }
 
-    public AxisPlotLines setId( String id ) {
+    public AxisPlotLines setId(String id) {
         this.id = id;
         return this;
     }
 
-    public AxisPlotLines setLabel( AxisPlotLineLabel label ) {
+    public AxisPlotLines setLabel(AxisPlotLineLabel label) {
         this.label = label;
         return this;
     }
 
-    public AxisPlotLines setValue( double value ) {
+    public AxisPlotLines setValue(double value) {
         this.value = value;
         return this;
     }
 
-    public AxisPlotLines setWidth( int width ) {
+    public AxisPlotLines setWidth(int width) {
         this.width = width;
         return this;
     }
 
-    public AxisPlotLines setZIndex( int zindex ) {
+    public AxisPlotLines setZIndex(int zindex) {
         this.zindex = zindex;
         return this;
     }

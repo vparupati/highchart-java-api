@@ -6,11 +6,11 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 
 public class PlotOptionsStates extends BaseObject {
 
-    @XmlElement( type = PlotStatesSelect.class )
+    @XmlElement(type = PlotStatesSelect.class)
     private PlotStatesSelect select;
 
     public PlotStatesSelect getSelect() {
-        if ( select == null ) {
+        if (select == null) {
             select = new PlotStatesSelect();
         }
         return select;

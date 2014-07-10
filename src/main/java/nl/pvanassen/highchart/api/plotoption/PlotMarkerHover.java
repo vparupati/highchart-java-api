@@ -10,7 +10,7 @@ public class PlotMarkerHover extends BaseObject {
         return enabled;
     }
 
-    public PlotMarkerHover setEnabled( boolean enabled ) {
+    public PlotMarkerHover setEnabled(boolean enabled) {
         this.enabled = enabled;
         return this;
     }

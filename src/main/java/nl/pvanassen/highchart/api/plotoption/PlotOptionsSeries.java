@@ -30,7 +30,7 @@ public class PlotOptionsSeries extends BaseObject {
     private Double fillOpacity;
 
     private Integer borderWidth;
-    
+
     @XmlElement
     private PlotColor fillColor;
 
@@ -114,12 +114,12 @@ public class PlotOptionsSeries extends BaseObject {
         this.states = states;
         return this;
     }
- 
+
     public PlotColor getFillColor() {
         if (fillColor == null) {
-            fillColor =  new PlotColor();
+            fillColor = new PlotColor();
         }
         return fillColor;
     }
-    
+
 }

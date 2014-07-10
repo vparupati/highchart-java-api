@@ -6,18 +6,18 @@ import javax.xml.bind.annotation.XmlElement;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
 
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class Legend extends BaseObject {
 
     private Boolean reversed;
 
     private Boolean enabled;
 
-    private String  align;
+    private String align;
 
-    private String  layout;
+    private String layout;
 
-    private String  verticalAlign;
+    private String verticalAlign;
 
     @XmlElement
     private Integer x;
@@ -54,39 +54,39 @@ public class Legend extends BaseObject {
     }
 
     @XmlElement
-    public Legend setAlign( String align ) {
+    public Legend setAlign(String align) {
         this.align = align;
         return this;
     }
 
-    public Legend setEnabled( boolean enabled ) {
+    public Legend setEnabled(boolean enabled) {
         this.enabled = enabled;
         return this;
     }
 
     @XmlElement
-    public Legend setLayout( String layout ) {
+    public Legend setLayout(String layout) {
         this.layout = layout;
         return this;
     }
 
-    public Legend setReversed( boolean reversed ) {
+    public Legend setReversed(boolean reversed) {
         this.reversed = reversed;
         return this;
     }
 
     @XmlElement
-    public Legend setVerticalAlign( String verticalAlign ) {
+    public Legend setVerticalAlign(String verticalAlign) {
         this.verticalAlign = verticalAlign;
         return this;
     }
 
-    public Legend setX( int x ) {
+    public Legend setX(int x) {
         this.x = x;
         return this;
     }
 
-    public Legend setY( int y ) {
+    public Legend setY(int y) {
         this.y = y;
         return this;
     }

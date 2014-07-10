@@ -4,9 +4,9 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 
 public class PlotMarkerStates extends BaseObject {
 
-    private PlotMarkerSelect select;
+    private final PlotMarkerSelect select;
 
-    private PlotMarkerHover  hover;
+    private final PlotMarkerHover hover;
 
     public PlotMarkerStates() {
         select = new PlotMarkerSelect();

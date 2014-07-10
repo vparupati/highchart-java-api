@@ -9,41 +9,41 @@ import nl.pvanassen.highchart.api.format.DateTimeLabelFormats;
 import nl.pvanassen.highchart.api.utils.ArrayString;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class Axis extends BaseObject {
 
     @XmlElement
-    private Integer                  maxZoom;
+    private Integer maxZoom;
 
     @XmlElement
-    private Boolean                  startOnTick;
+    private Boolean startOnTick;
 
     @XmlElement
-    private Double                   tickInterval;
+    private Double tickInterval;
 
     @XmlElement
-    private Boolean                  showFirstLabel;
+    private Boolean showFirstLabel;
 
     @XmlElement
-    private Double                   min;
+    private Double min;
 
     @XmlElement
-    private Double                   max;
+    private Double max;
 
     @XmlElement
-    private String                   type;
+    private String type;
 
-    @XmlElement( type = AxisLabels.class )
-    private AxisLabels               labels;
+    @XmlElement(type = AxisLabels.class)
+    private AxisLabels labels;
 
-    private DateTimeLabelFormats     dateTimeLabelFormats;
+    private DateTimeLabelFormats dateTimeLabelFormats;
 
     @XmlTransient
-    private ArrayString              categories;
+    private ArrayString categories;
 
     private JsonArray<AxisPlotLines> plotLines;
 
-    private Title                    title;
+    private Title title;
 
     public Axis() {
         labels = null;
@@ -54,25 +54,25 @@ public class Axis extends BaseObject {
 
     @XmlTransient
     public ArrayString getCategories() {
-        if ( categories == null ) {
+        if (categories == null) {
             categories = new ArrayString();
         }
         return categories;
     }
 
     public int getCategoriesLength() {
-        return ( categories != null ) ? categories.size() : 0;
+        return categories != null ? categories.size() : 0;
     }
 
     public DateTimeLabelFormats getDateTimeLabelFormats() {
-        if ( dateTimeLabelFormats == null ) {
+        if (dateTimeLabelFormats == null) {
             dateTimeLabelFormats = new DateTimeLabelFormats();
         }
         return dateTimeLabelFormats;
     }
 
     public AxisLabels getLabels() {
-        if ( labels == null ) {
+        if (labels == null) {
             labels = new AxisLabels();
         }
         return labels;
@@ -99,7 +99,7 @@ public class Axis extends BaseObject {
     }
 
     public Title getTitle() {
-        if ( title == null ) {
+        if (title == null) {
             title = new Title();
         }
         return title;
@@ -117,42 +117,42 @@ public class Axis extends BaseObject {
         return startOnTick;
     }
 
-    public Axis setMax( double max ) {
+    public Axis setMax(double max) {
         this.max = max;
         return this;
     }
 
-    public Axis setMaxZoom( int maxZoom ) {
+    public Axis setMaxZoom(int maxZoom) {
         this.maxZoom = maxZoom;
         return this;
     }
 
-    public Axis setMin( double min ) {
+    public Axis setMin(double min) {
         this.min = min;
         return this;
     }
 
-    public Axis setPlotLines( JsonArray<AxisPlotLines> plotLines ) {
+    public Axis setPlotLines(JsonArray<AxisPlotLines> plotLines) {
         this.plotLines = plotLines;
         return this;
     }
 
-    public Axis setShowFirstLabel( boolean showFirstLabel ) {
+    public Axis setShowFirstLabel(boolean showFirstLabel) {
         this.showFirstLabel = showFirstLabel;
         return this;
     }
 
-    public Axis setStartOnTick( boolean startOnTick ) {
+    public Axis setStartOnTick(boolean startOnTick) {
         this.startOnTick = startOnTick;
         return this;
     }
 
-    public Axis setTickInterval( double tickInterval ) {
+    public Axis setTickInterval(double tickInterval) {
         this.tickInterval = tickInterval;
         return this;
     }
 
-    public Axis setType( String type ) {
+    public Axis setType(String type) {
         this.type = type;
         return this;
     }

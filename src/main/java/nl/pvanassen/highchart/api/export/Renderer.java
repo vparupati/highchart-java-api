@@ -6,7 +6,7 @@ public interface Renderer<T> {
 
     public static abstract class PojoRenderer<T> implements Renderer<T> {
 
-        private T            options, globalOptions;
+        private T options, globalOptions;
 
         private OutputStream output;
 
@@ -23,19 +23,19 @@ public interface Renderer<T> {
         }
 
         @Override
-        public Renderer<T> setChartOptions( T options ) {
+        public Renderer<T> setChartOptions(T options) {
             this.options = options;
             return this;
         }
 
         @Override
-        public Renderer<T> setGlobalOptions( T options ) {
+        public Renderer<T> setGlobalOptions(T options) {
             this.globalOptions = options;
             return this;
         }
 
         @Override
-        public Renderer<T> setOutputStream( OutputStream output ) {
+        public Renderer<T> setOutputStream(OutputStream output) {
             this.output = output;
             return this;
         }
@@ -44,10 +44,10 @@ public interface Renderer<T> {
 
     void render();
 
-    Renderer<T> setChartOptions( T options );
+    Renderer<T> setChartOptions(T options);
 
-    Renderer<T> setGlobalOptions( T options );
+    Renderer<T> setGlobalOptions(T options);
 
-    Renderer<T> setOutputStream( OutputStream outputStream );
+    Renderer<T> setOutputStream(OutputStream outputStream);
 
 }

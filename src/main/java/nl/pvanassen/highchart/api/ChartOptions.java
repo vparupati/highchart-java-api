@@ -5,74 +5,74 @@ import javax.xml.bind.annotation.*;
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlRootElement( name = "chartOptions" )
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlRootElement(name = "chartOptions")
+@XmlAccessorType(XmlAccessType.NONE)
 public class ChartOptions extends BaseObject {
 
     @XmlTransient
-    private Chart             chart;
+    private Chart chart;
 
     @XmlElement
-    private Credits           credits;
+    private Credits credits;
 
     @XmlElement
-    private Labels            labels;
+    private Labels labels;
 
     @XmlElement
-    private Legend            legend;
+    private Legend legend;
 
     @XmlElement
-    private PlotOptions       plotOptions;
+    private PlotOptions plotOptions;
 
     // @XmlTransient
-    @XmlElements( @XmlElement( name = "series", type = Series.class ) )
+    @XmlElements(@XmlElement(name = "series", type = Series.class))
     private JsonArray<Series> series;
 
     @XmlElement
-    private Title             title;
+    private Title title;
 
     @XmlElement
-    private Title             subtitle;
+    private Title subtitle;
 
     @XmlElement
-    private Tooltip           tooltip;
+    private Tooltip tooltip;
 
     @XmlElement
-    private Axis              xAxis;
+    private Axis xAxis;
 
     @XmlElement
-    private Axis              yAxis;
+    private Axis yAxis;
 
     public Chart getChart() {
-        if ( chart == null ) {
+        if (chart == null) {
             chart = new Chart();
         }
         return chart;
     }
 
     public Credits getCredits() {
-        if ( credits == null ) {
+        if (credits == null) {
             credits = new Credits();
         }
         return credits;
     }
 
     public Labels getLabels() {
-        if ( labels == null ) {
+        if (labels == null) {
             labels = new Labels();
         }
         return labels;
     }
 
     public Legend getLegend() {
-        if ( legend == null ) {
+        if (legend == null) {
             legend = new Legend();
         }
         return legend;
     }
 
     public PlotOptions getPlotOptions() {
-        if ( plotOptions == null ) {
+        if (plotOptions == null) {
             plotOptions = new PlotOptions();
         }
         return plotOptions;
@@ -80,42 +80,42 @@ public class ChartOptions extends BaseObject {
 
     @XmlTransient
     public JsonArray<Series> getSeries() {
-        if ( series == null ) {
+        if (series == null) {
             series = new JsonArray<Series>();
         }
         return series;
     }
 
     public Title getSubtitle() {
-        if ( subtitle == null ) {
+        if (subtitle == null) {
             subtitle = new Title();
         }
         return subtitle;
     }
 
     public Title getTitle() {
-        if ( title == null ) {
+        if (title == null) {
             title = new Title();
         }
         return title;
     }
 
     public Tooltip getTooltip() {
-        if ( tooltip == null ) {
+        if (tooltip == null) {
             tooltip = new Tooltip();
         }
         return tooltip;
     }
 
     public Axis getXAxis() {
-        if ( xAxis == null ) {
+        if (xAxis == null) {
             xAxis = new Axis();
         }
         return xAxis;
     }
 
     public Axis getYAxis() {
-        if ( yAxis == null ) {
+        if (yAxis == null) {
             yAxis = new Axis();
         }
         return yAxis;

@@ -15,15 +15,15 @@ public class Style extends BaseObject {
         return properties;
     }
 
-    public String getProperty( String property ) {
-        return ( properties != null ) ? properties.get( property ) : null;
+    public String getProperty(String property) {
+        return properties != null ? properties.get(property) : null;
     }
 
-    public Style setProperty( String property, String value ) {
-        if ( properties == null ) {
+    public Style setProperty(String property, String value) {
+        if (properties == null) {
             properties = new HashMap<String, String>();
         }
-        properties.put( property, value );
+        properties.put(property, value);
         return this;
     }
 

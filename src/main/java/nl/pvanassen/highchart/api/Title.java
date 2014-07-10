@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.base.Style;
 
-@XmlAccessorType( XmlAccessType.NONE )
+@XmlAccessorType(XmlAccessType.NONE)
 public class Title extends BaseObject {
 
     @XmlElement
-    private String  text;
+    private String text;
 
-    private Style   style;
+    private Style style;
 
     @XmlElement
     private Integer margin;
@@ -28,7 +28,7 @@ public class Title extends BaseObject {
     }
 
     public Style getStyle() {
-        if ( style == null ) {
+        if (style == null) {
             style = new Style();
         }
         return style;
@@ -38,12 +38,12 @@ public class Title extends BaseObject {
         return text;
     }
 
-    public Title setMargin( int margin ) {
+    public Title setMargin(int margin) {
         this.margin = margin;
         return this;
     }
 
-    public Title setText( String text ) {
+    public Title setText(String text) {
         this.text = text;
         return this;
     }
