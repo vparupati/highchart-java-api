@@ -49,6 +49,16 @@ public class TestColumnBasic {
         Assert.assertEquals( "Expected column basic json", columnBasicJson, json );
     }
 
+    @Test
+    public void testWrongMargins() {
+        ChartOptions chartOptions = new ChartOptions();
+
+        chartOptions.getChart().setDefaultSeriesType( SeriesType.COLUMN ); // do not set any margins!
+        String json = chartOptions.toJson();
+
+        Assert.assertEquals("There should be no margins in the json", "{\"chart\":{\"defaultSeriesType\":\"column\"}}", json);
+    }
+
     private void addSeries( ChartOptions chartOptions, String seriesName, double[] datas ) {
 
         Series newSeries = new Series().setName( seriesName );
