@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>parent</artifactId>
 		<groupId>nl.pvanassen</groupId>
-		<version>0.2</version>
+		<version>0.3</version>
 	</parent>
 	<artifactId>highchart-java-api</artifactId>
 	<version>0.2-SNAPSHOT</version>

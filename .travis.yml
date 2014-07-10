@@ -3,8 +3,7 @@ jdk:
   - openjdk6
   - openjdk7
   - oraclejdk7
-<<<<<<< HEAD
+  - openjdk8
+  - oraclejdk8
 after_success:
   - mvn test jacoco:report coveralls:jacoco
-=======
->>>>>>> refs/remotes/origin/master
