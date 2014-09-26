@@ -1,13 +1,12 @@
 package nl.pvanassen.highchart.api.base;
 
-import java.lang.reflect.Type;
-import java.math.BigDecimal;
-
 import nl.pvanassen.highchart.api.format.DateTimeLabelFormats;
 import nl.pvanassen.highchart.api.serializer.DateTimeLabelFormatsSerializer;
 import nl.pvanassen.highchart.api.serializer.StyleSerializer;
 
-import com.google.gson.*;
+import com.google.gson.ExclusionStrategy;
+import com.google.gson.FieldAttributes;
+import com.google.gson.GsonBuilder;
 
 public final class GsonHelper {
 
@@ -40,14 +39,6 @@ public final class GsonHelper {
                 return attributes.getName().equals(GsonHelper.USER_OBJECT);
             }
 
-        }).registerTypeAdapter(Double.class, new JsonSerializer<Double>() {
-
-                    @Override
-            public JsonElement serialize(Double originalValue, Type typeOf, JsonSerializationContext context) {
-                BigDecimal bigValue = BigDecimal.valueOf(originalValue);
-
-                return new JsonPrimitive(bigValue.toPlainString());
-            }
         });
     }
 }
