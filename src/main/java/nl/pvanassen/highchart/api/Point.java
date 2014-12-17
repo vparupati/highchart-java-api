@@ -36,11 +36,11 @@ public class Point extends BaseObject {
         return selected;
     }
 
-    public double getX() {
+    public Double getX() {
         return x;
     }
 
-    public double getY() {
+    public Double getY() {
         return y;
     }
 
@@ -68,8 +68,18 @@ public class Point extends BaseObject {
         return this;
     }
 
+    public Point setX(Double x) {
+        this.x = x;
+        return this;
+    }
+
     public Point setX(double x) {
         this.x = x;
+        return this;
+    }
+
+    public Point setY(Double y) {
+        this.y = y;
         return this;
     }
 
@@ -77,5 +87,4 @@ public class Point extends BaseObject {
         this.y = y;
         return this;
     }
-
 }
