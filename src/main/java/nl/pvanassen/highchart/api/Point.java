@@ -190,7 +190,7 @@ public class Point extends BaseObject {
      * Defaults to false.
      * @return the sliced
      */
-    public Boolean getIsSliced() {
+    public Boolean getSliced() {
         return sliced;
     }
 
