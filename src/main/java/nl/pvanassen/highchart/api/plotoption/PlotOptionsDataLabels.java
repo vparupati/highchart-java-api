@@ -5,49 +5,49 @@ import nl.pvanassen.highchart.api.base.Style;
 
 public class PlotOptionsDataLabels extends BaseObject {
 
-    private String align = null;
+    private String align;
     
-    private String backgroundColor = null;
+    private String backgroundColor;
             
-    private String borderColor = null;
+    private String borderColor;
     
-    private Integer borderRadius = null;
+    private Integer borderRadius;
     
-    private Integer borderWidth = null;
+    private Integer borderWidth;
     
-    private String color = null;
+    private String color;
     
-    private Boolean crop = null;
+    private Boolean crop;
     
-    private Boolean defer = null;
+    private Boolean defer;
 
-    private Boolean enabled = null;
+    private Boolean enabled;
     
-    private String format = null;
+    private String format;
 
-    private Object formatter = null;
+    private Object formatter;
     
-    private Boolean inside = null;
+    private Boolean inside;
     
-    private String overflow = null;
+    private String overflow;
     
-    private Integer padding = null;
+    private Integer padding;
             
-    private Double rotation = null;
+    private Double rotation;
     
-    private Boolean shadow = null;
+    private Boolean shadow;
     
-    private Style style = null;
+    private Style style;
     
-    private Boolean useHTML = null;
+    private Boolean useHTML;
     
-    private String verticalAlign = null;
+    private String verticalAlign;
     
-    private Integer x = null;
+    private Integer x;
     
-    private Integer y = null;
+    private Integer y;
     
-    private Integer zIndex = null;
+    private Integer zIndex;
 
     /**
      * @return the align
