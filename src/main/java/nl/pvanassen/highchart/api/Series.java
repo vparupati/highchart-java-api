@@ -1,112 +1,184 @@
 package nl.pvanassen.highchart.api;
 
-import javax.xml.bind.annotation.*;
-
 import nl.pvanassen.highchart.api.base.BaseObject;
-import nl.pvanassen.highchart.api.plotoption.PlotMarkerStates;
-import nl.pvanassen.highchart.api.serie.SeriesCenter;
+import nl.pvanassen.highchart.api.shared.SeriesType;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlAccessorType(XmlAccessType.NONE)
-@XmlType(namespace = "chartoptions")
 public class Series extends BaseObject {
-
-    @XmlElement(type = PlotMarkerStates.class)
-    private PlotMarkerStates states;
-
-    @XmlElements(@XmlElement(name = "data", type = Point.class))
-    private Object data;
-
-    @XmlElement
-    private String color;
-
-    @XmlElement
+    private JsonPointArray data;
+    
+    private String id;
+    
     private String name;
-
-    @XmlElement
+    
+    private String stack;
+    
     private String type;
+    
+    private Integer xAxis;
 
-    @XmlElement
-    private String size;
+    private Integer yAxis;
+    
+    private Integer zIndex;
 
-    private SeriesCenter center;
-
-    public String getCenterX() {
-        return center != null ? center.getX() : null;
-    }
-
-    public String getCenterY() {
-        return center != null ? center.getY() : null;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    @SuppressWarnings("unchecked")
-    public JsonArray<Point> getData() {
+    public JsonPointArray getData() {
         if (data == null) {
-            data = new JsonArray<Point>();
+            data = new JsonPointArray();
         }
-        return (JsonArray<Point>) data;
+        return data;
     }
 
+    /**
+     * An id for the series. This can be used after render time to get a 
+     * pointer to the series object through chart.get().
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * An id for the series. This can be used after render time to get a 
+     * pointer to the series object through chart.get().
+     * @param id the id to set
+     * @return 
+     */
+    public Series setId(String id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * The name of the series as shown in the legend, tooltip etc.
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
-    public String getSize() {
-        return size;
-    }
-
-    public PlotMarkerStates getStates() {
-        if (states == null) {
-            states = new PlotMarkerStates();
-        }
-        return states;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public Series setCenter(String x, String y) {
-        if (center == null) {
-            center = new SeriesCenter();
-        }
-        center.setX(x);
-        center.setY(y);
-        return this;
-    }
-
-    public Series setColor(String color) {
-        this.color = color;
-        return this;
-    }
-
-    @XmlTransient
-    public Series setData(JsonArray<Point> data) {
-        this.data = data;
-        return this;
-    }
-
+    /**
+     * The name of the series as shown in the legend, tooltip etc.
+     * @param name the name to set
+     * @return 
+     */
     public Series setName(String name) {
         this.name = name;
         return this;
     }
 
-    public Series setSize(String size) {
-        this.size = size;
+    /**
+     * This option allows grouping series in a stacked chart. The stack option 
+     * can be a string or a number or anything else, as long as the grouped 
+     * series' stack options match each other.
+     * @return the stack
+     */
+    public String getStack() {
+        return stack;
+    }
+
+    /**
+     * This option allows grouping series in a stacked chart. The stack option 
+     * can be a string or a number or anything else, as long as the grouped 
+     * series' stack options match each other.
+     * @param stack the stack to set
+     * @return 
+     */
+    public Series setStack(String stack) {
+        this.stack = stack;
         return this;
     }
 
-    public Series setStates(PlotMarkerStates states) {
-        this.states = states;
+    /**
+     * The type of series
+     * @return the type
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * The type of series
+     * @param type the type to set
+     * @return 
+     */
+    public Series setType(SeriesType type) {
+        if(type != null) {
+            this.type = type.name().toLowerCase();
+        } else {
+            this.type = null;
+        }
         return this;
     }
 
-    public Series setType(String type) {
-        this.type = type;
+    /**
+     * When using dual or multiple x axes, this number defines which xAxis the 
+     * particular series is connected to. It refers to either the axis id or 
+     * the index of the axis in the xAxis array, with 0 being the first. 
+     * Defaults to 0.
+     * @return the xAxis
+     */
+    public Integer getXAxis() {
+        return xAxis;
+    }
+
+    /**
+     * When using dual or multiple x axes, this number defines which xAxis the 
+     * particular series is connected to. It refers to either the axis id or 
+     * the index of the axis in the xAxis array, with 0 being the first. 
+     * Defaults to 0.
+     * @param xAxis the xAxis to set
+     * @return 
+     */
+    public Series setXAxis(Integer xAxis) {
+        this.xAxis = xAxis;
         return this;
     }
+
+    /**
+     * When using dual or multiple y axes, this number defines which yAxis the 
+     * particular series is connected to. It refers to either the axis id or 
+     * the index of the axis in the yAxis array, with 0 being the first. 
+     * Defaults to 0.
+     * @return the yAxis
+     */
+    public Integer getYAxis() {
+        return yAxis;
+    }
+
+    /**
+     * When using dual or multiple y axes, this number defines which yAxis the 
+     * particular series is connected to. It refers to either the axis id or 
+     * the index of the axis in the yAxis array, with 0 being the first. 
+     * Defaults to 0.
+     * @param yAxis the yAxis to set
+     * @return 
+     */
+    public Series setYAxis(Integer yAxis) {
+        this.yAxis = yAxis;
+        return this;
+    }
+
+    /**
+     * Define the visual z index of the series.
+     * @return the zIndex
+     */
+    public Integer getZIndex() {
+        return zIndex;
+    }
+
+    /**
+     * Define the visual z index of the series.
+     * @param zIndex the zIndex to set
+     * @return 
+     */
+    public Series setZIndex(Integer zIndex) {
+        this.zIndex = zIndex;
+        return this;
+    }
+    
+    public static class JsonPointArray 
+        extends     JsonArray<Point> {
+        
+    }
+
 }
