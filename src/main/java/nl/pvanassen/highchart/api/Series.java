@@ -1,11 +1,11 @@
 package nl.pvanassen.highchart.api;
 
-import nl.pvanassen.highchart.api.base.BaseObject;
+import nl.pvanassen.highchart.api.plotoption.PlotOptionsSeries;
 import nl.pvanassen.highchart.api.shared.SeriesType;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-public class Series extends BaseObject {
-    private JsonPointArray data;
+public class Series extends PlotOptionsSeries {
+    private JsonArray<Point> data;
     
     private String id;
     
@@ -21,9 +21,9 @@ public class Series extends BaseObject {
     
     private Integer zIndex;
 
-    public JsonPointArray getData() {
+    public JsonArray<Point> getData() {
         if (data == null) {
-            data = new JsonPointArray();
+            data = new JsonArray<Point>();
         }
         return data;
     }
@@ -175,10 +175,4 @@ public class Series extends BaseObject {
         this.zIndex = zIndex;
         return this;
     }
-    
-    public static class JsonPointArray 
-        extends     JsonArray<Point> {
-        
-    }
-
 }

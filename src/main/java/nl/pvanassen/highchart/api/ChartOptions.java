@@ -1,46 +1,34 @@
 package nl.pvanassen.highchart.api;
 
-import javax.xml.bind.annotation.*;
 
+import java.util.Collections;
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlRootElement(name = "chartOptions")
-@XmlAccessorType(XmlAccessType.NONE)
 public class ChartOptions extends BaseObject {
 
-    @XmlTransient
     private Chart chart;
+    
+    private JsonArray<String> colors;
 
-    @XmlElement
     private Credits credits;
 
-    @XmlElement
     private Labels labels;
 
-    @XmlElement
     private Legend legend;
 
-    @XmlElement
     private PlotOptions plotOptions;
 
-    // @XmlTransient
-    @XmlElements(@XmlElement(name = "series", type = Series.class))
     private JsonArray<Series> series;
 
-    @XmlElement
     private Title title;
 
-    @XmlElement
     private Title subtitle;
 
-    @XmlElement
     private Tooltip tooltip;
 
-    @XmlElement
     private Axis xAxis;
 
-    @XmlElement
     private Axis yAxis;
 
     public Chart getChart() {
@@ -48,6 +36,13 @@ public class ChartOptions extends BaseObject {
             chart = new Chart();
         }
         return chart;
+    }
+    
+    public JsonArray<String> getColors() {
+        if(this.colors == null) {
+            this.colors = new JsonArray<String>();
+        }
+        return this.colors;
     }
 
     public Credits getCredits() {
@@ -78,7 +73,6 @@ public class ChartOptions extends BaseObject {
         return plotOptions;
     }
 
-    @XmlTransient
     public JsonArray<Series> getSeries() {
         if (series == null) {
             series = new JsonArray<Series>();

@@ -1,8 +1,10 @@
 package nl.pvanassen.highchart.api;
 
+import java.awt.Color;
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.plotoption.PlotOptionsDataLabels;
 import nl.pvanassen.highchart.api.plotoption.PlotOptionsMarker;
+import nl.pvanassen.highchart.api.shared.HexColor;
 
 public class Point extends BaseObject {
     
@@ -49,6 +51,11 @@ public class Point extends BaseObject {
 
     public Point setColor(String color) {
         this.color = color;
+        return this;
+    }
+    
+    public Point setColor(Color color) {
+        this.color = HexColor.toString(color);
         return this;
     }
 
