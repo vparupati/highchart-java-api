@@ -1,7 +1,12 @@
 package nl.pvanassen.highchart.api.plotoption;
 
+import java.awt.Color;
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.base.Style;
+import nl.pvanassen.highchart.api.shared.AlignType;
+import nl.pvanassen.highchart.api.shared.EnumString;
+import nl.pvanassen.highchart.api.shared.HexColor;
+import nl.pvanassen.highchart.api.shared.VerticalAlignType;
 
 public class PlotOptionsDataLabels extends BaseObject {
 
@@ -60,8 +65,8 @@ public class PlotOptionsDataLabels extends BaseObject {
      * @param align the align to set
      * @return 
      */
-    public PlotOptionsDataLabels setAlign(String align) {
-        this.align = align;
+    public PlotOptionsDataLabels setAlign(AlignType align) {
+        this.align = EnumString.toString(align);
         return this;
     }
 
@@ -72,6 +77,15 @@ public class PlotOptionsDataLabels extends BaseObject {
         return backgroundColor;
     }
 
+    /**
+     * @param backgroundColor the backgroundColor to set
+     * @return 
+     */
+    public PlotOptionsDataLabels setBackgroundColor(Color backgroundColor) {
+        this.backgroundColor = HexColor.toString(backgroundColor);
+        return this;
+    }
+    
     /**
      * @param backgroundColor the backgroundColor to set
      * @return 
@@ -92,8 +106,8 @@ public class PlotOptionsDataLabels extends BaseObject {
      * @param borderColor the borderColor to set
      * @return 
      */
-    public PlotOptionsDataLabels setBorderColor(String borderColor) {
-        this.borderColor = borderColor;
+    public PlotOptionsDataLabels setBorderColor(Color borderColor) {
+        this.borderColor = HexColor.toString(borderColor);
         return this;
     }
 
@@ -135,13 +149,22 @@ public class PlotOptionsDataLabels extends BaseObject {
     public String getColor() {
         return color;
     }
-
+    
     /**
      * @param color the color to set
      * @return 
      */
     public PlotOptionsDataLabels setColor(String color) {
         this.color = color;
+        return this;
+    }
+
+    /**
+     * @param color the color to set
+     * @return 
+     */
+    public PlotOptionsDataLabels setColor(Color color) {
+        this.color = HexColor.toString(color);
         return this;
     }
 
@@ -342,8 +365,9 @@ public class PlotOptionsDataLabels extends BaseObject {
      * @param verticalAlign the verticalAlign to set
      * @return 
      */
-    public PlotOptionsDataLabels setVerticalAlign(String verticalAlign) {
-        this.verticalAlign = verticalAlign;
+    public PlotOptionsDataLabels setVerticalAlign(
+            final VerticalAlignType verticalAlign) {
+        this.verticalAlign = EnumString.toString(verticalAlign);
         return this;
     }
 
@@ -382,7 +406,7 @@ public class PlotOptionsDataLabels extends BaseObject {
     /**
      * @return the zIndex
      */
-    public Integer getzIndex() {
+    public Integer getZIndex() {
         return zIndex;
     }
 
@@ -390,7 +414,7 @@ public class PlotOptionsDataLabels extends BaseObject {
      * @param zIndex the zIndex to set
      * @return 
      */
-    public PlotOptionsDataLabels setzIndex(Integer zIndex) {
+    public PlotOptionsDataLabels setZIndex(Integer zIndex) {
         this.zIndex = zIndex;
         return this;
     }
