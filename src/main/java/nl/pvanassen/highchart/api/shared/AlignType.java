@@ -20,7 +20,7 @@ package nl.pvanassen.highchart.api.shared;
  * @author shaun.lefeuvre
  */
 public enum AlignType {
-    LEFT,
-    CENTER,
-    RIGHT
+    left,
+    center,
+    right
 }

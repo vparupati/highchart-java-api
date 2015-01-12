@@ -2,7 +2,7 @@ package nl.pvanassen.highchart.api;
 
 import java.awt.Color;
 import nl.pvanassen.highchart.api.base.BaseObject;
-import nl.pvanassen.highchart.api.base.Style;
+import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.shared.HexColor;
 
 public class Tooltip extends BaseObject {

@@ -3,8 +3,11 @@ package nl.pvanassen.highchart.api;
 import nl.pvanassen.highchart.api.plotoption.PlotOptionsSeries;
 import nl.pvanassen.highchart.api.shared.SeriesType;
 import nl.pvanassen.highchart.api.utils.JsonArray;
+import nl.pvanassen.highchart.api.utils.Utils;
 
-public class Series extends PlotOptionsSeries {
+public class Series 
+    extends     PlotOptionsSeries {
+    
     private JsonArray<Point> data;
     
     private String id;
@@ -20,6 +23,25 @@ public class Series extends PlotOptionsSeries {
     private Integer yAxis;
     
     private Integer zIndex;
+    
+    public Series style(
+            final Series src) {
+        super.style(src);
+        
+        if(src == null) {
+            return this;
+        }
+        
+        this.id = src.id;
+        this.name = src.name;
+        this.stack = src.stack;
+        this.type = src.type;
+        this.xAxis = src.xAxis;
+        this.yAxis = src.yAxis;
+        Utils.styleArray(this.data, src.data);
+        this.zIndex = src.zIndex;
+        return this;
+    }
 
     public JsonArray<Point> getData() {
         if (data == null) {

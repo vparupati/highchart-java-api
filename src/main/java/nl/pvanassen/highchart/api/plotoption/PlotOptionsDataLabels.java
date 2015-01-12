@@ -2,13 +2,17 @@ package nl.pvanassen.highchart.api.plotoption;
 
 import java.awt.Color;
 import nl.pvanassen.highchart.api.base.BaseObject;
-import nl.pvanassen.highchart.api.base.Style;
+import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.shared.AlignType;
 import nl.pvanassen.highchart.api.shared.EnumString;
 import nl.pvanassen.highchart.api.shared.HexColor;
+import nl.pvanassen.highchart.api.shared.Styleable;
 import nl.pvanassen.highchart.api.shared.VerticalAlignType;
+import nl.pvanassen.highchart.api.utils.Utils;
 
-public class PlotOptionsDataLabels extends BaseObject {
+public class PlotOptionsDataLabels 
+    extends     BaseObject
+    implements  Styleable<PlotOptionsDataLabels> { 
 
     private String align;
     
@@ -29,8 +33,6 @@ public class PlotOptionsDataLabels extends BaseObject {
     private Boolean enabled;
     
     private String format;
-
-    private Object formatter;
     
     private Boolean inside;
     
@@ -53,6 +55,32 @@ public class PlotOptionsDataLabels extends BaseObject {
     private Integer y;
     
     private Integer zIndex;
+    
+    
+    public PlotOptionsDataLabels style(
+            final PlotOptionsDataLabels src) {
+        if(src == null) {
+            return this;
+        }
+        this.align = src.align;
+        this.backgroundColor = src.backgroundColor;
+        this.borderColor = src.borderColor;
+        this.borderRadius = src.borderRadius;
+        this.borderWidth = src.borderWidth;
+        this.color = src.color;
+        this.crop = src.crop;
+        this.defer = src.defer;
+        this.enabled = src.enabled;
+        this.format = src.format;
+        this.inside = src.inside;
+        this.overflow = src.overflow;
+        this.padding = src.padding;
+        this.rotation = src.rotation;
+        this.shadow = src.shadow;
+        Utils.style(this.style, src.style);
+        this.useHTML = src.useHTML;
+        return this;
+    }
 
     /**
      * @return the align
@@ -233,22 +261,6 @@ public class PlotOptionsDataLabels extends BaseObject {
     }
 
     /**
-     * @return the formatter
-     */
-    public Object getFormatter() {
-        return formatter;
-    }
-
-    /**
-     * @param formatter the formatter to set
-     * @return 
-     */
-    public PlotOptionsDataLabels setFormatter(Object formatter) {
-        this.formatter = formatter;
-        return this;
-    }
-
-    /**
      * @return the inside
      */
     public Boolean getInside() {
@@ -418,6 +430,4 @@ public class PlotOptionsDataLabels extends BaseObject {
         this.zIndex = zIndex;
         return this;
     }
-
-
 }

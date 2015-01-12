@@ -1,7 +1,7 @@
 package nl.pvanassen.highchart.api.axis;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
-import nl.pvanassen.highchart.api.base.Style;
+import nl.pvanassen.highchart.api.shared.Style;
 
 public class AxisPlotLineLabel extends BaseObject {
 

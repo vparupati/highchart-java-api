@@ -6,9 +6,13 @@ import nl.pvanassen.highchart.api.shared.DashStyleType;
 import nl.pvanassen.highchart.api.shared.EnumString;
 import nl.pvanassen.highchart.api.shared.HexColor;
 import nl.pvanassen.highchart.api.shared.StackingType;
+import nl.pvanassen.highchart.api.shared.Styleable;
 import nl.pvanassen.highchart.api.utils.JsonArray;
+import nl.pvanassen.highchart.api.utils.Utils;
 
-public class PlotOptionsSeries extends BaseObject {
+public class PlotOptionsSeries 
+    extends     BaseObject
+    implements  Styleable<PlotOptionsSeries> {
     
     private Boolean allowPointSelect;
     
@@ -93,6 +97,57 @@ public class PlotOptionsSeries extends BaseObject {
     private Boolean trackByArea;
 
     private Boolean visible;
+    
+    @Override
+    public PlotOptionsSeries style(
+            final PlotOptionsSeries src) {
+        if(src == null) {
+            return this;
+        }
+        
+        this.allowPointSelect = src.allowPointSelect;
+        this.animation = src.animation;
+        this.borderColor = src.borderColor;
+        this.borderRadius = src.borderRadius;
+        this.borderWidth = src.borderWidth;
+        this.color = src.color;
+        this.colorByPoint = src.colorByPoint;
+        Utils.stylePrimitiveArray(this.colors, src.colors);
+        this.connectEnds = src.connectEnds;
+        this.connectNulls = src.connectNulls;
+        this.cropThreshold = src.cropThreshold;
+        this.cursor = src.cursor;
+        this.dashStyle = src.dashStyle;
+        Utils.style(this.dataLabels, src.dataLabels);
+        this.depth = src.depth;
+        this.edgeColor = src.edgeColor;
+        this.edgeWidth = src.edgeWidth;
+        this.enableMouseTracking = src.enableMouseTracking;
+        this.fillColor = src.fillColor;
+        this.fillOpacity = src.fillOpacity;
+        this.groupPadding = src.groupPadding;
+        this.groupZPadding = src.groupZPadding;
+        this.grouping = src.grouping;
+        this.innserSize = src.innserSize;
+        this.lineColor = src.lineColor;
+        this.lineWidth = src.lineWidth;
+        this.linkedTo = src.linkedTo;
+        Utils.style(this.marker, src.marker);
+        this.minPointLength = src.minPointLength;
+        this.minSize = src.minSize;
+        this.negativeColor = src.negativeColor;
+        this.negativeFillColor = src.negativeFillColor;
+        this.pointPadding = src.pointPadding;
+        this.shadow = src.shadow;
+        this.slicedOffset = src.slicedOffset;
+        this.stacking = src.stacking;
+        this.startAngle = src.startAngle;
+        this.step = src.step;
+        this.threshold = src.threshold;
+        this.trackByArea = src.trackByArea;
+        this.visible = src.visible;
+        return this;
+    }
 
     public PlotOptionsDataLabels getDataLabels() {
         if (dataLabels == null) {

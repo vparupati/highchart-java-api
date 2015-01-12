@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Gamma Associates Ltd.
+ * Copyright 2015 Gamma Associates Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,14 +19,6 @@ package nl.pvanassen.highchart.api.shared;
  *
  * @author shaun.lefeuvre
  */
-public class EnumString {
-    private EnumString() {}
-    
-    public static String toString(
-            final Enum<?> src) {
-        if(src != null) {
-            return src.name();
-        }
-        return null;
-    }
+public interface Styleable<T> {
+    public T style(T src);
 }

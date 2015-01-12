@@ -1,7 +1,7 @@
 package nl.pvanassen.highchart.api.axis;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
-import nl.pvanassen.highchart.api.base.Style;
+import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.shared.AlignType;
 import nl.pvanassen.highchart.api.shared.EnumString;
 
@@ -13,11 +13,9 @@ public class AxisLabels extends BaseObject {
     
     private String format;
     
-    private Object formatter;
-    
     private Integer maxStaggerLines;
     
-    private Object overflow;
+    private String overflow;
 
     private Double rotation;
 
@@ -86,22 +84,6 @@ public class AxisLabels extends BaseObject {
     }
 
     /**
-     * @return the formatter
-     */
-    public Object getFormatter() {
-        return formatter;
-    }
-
-    /**
-     * @param formatter the formatter to set
-     * @return 
-     */
-    public AxisLabels setFormatter(Object formatter) {
-        this.formatter = formatter;
-        return this;
-    }
-
-    /**
      * @return the maxStaggerLines
      */
     public Integer getMaxStaggerLines() {
@@ -127,16 +109,8 @@ public class AxisLabels extends BaseObject {
     /**
      * @return 
      */
-    public AxisLabels setOverflowFalse() {
-        this.overflow = false;
-        return this;
-    }
-    
-    /**
-     * @return 
-     */
-    public AxisLabels setOverflowJustify() {
-        this.overflow = "justify";
+    public AxisLabels setOverflow(String overflow) {
+        this.overflow = overflow;
         return this;
     }
 

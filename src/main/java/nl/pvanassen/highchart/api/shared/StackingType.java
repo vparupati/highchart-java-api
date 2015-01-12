@@ -20,6 +20,6 @@ package nl.pvanassen.highchart.api.shared;
  * @author shaun.lefeuvre
  */
 public enum StackingType {
-    NORMAL,
-    PERCENT
+    normal,
+    percent
 }

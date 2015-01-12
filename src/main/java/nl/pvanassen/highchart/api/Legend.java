@@ -2,7 +2,7 @@ package nl.pvanassen.highchart.api;
 
 import java.awt.Color;
 import nl.pvanassen.highchart.api.base.BaseObject;
-import nl.pvanassen.highchart.api.base.Style;
+import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.shared.AlignType;
 import nl.pvanassen.highchart.api.shared.EnumString;
 import nl.pvanassen.highchart.api.shared.HexColor;
@@ -11,8 +11,8 @@ import nl.pvanassen.highchart.api.shared.VerticalAlignType;
 public class Legend extends BaseObject {
     
     public enum LegendLayoutType {
-        HORIZONTAL,
-        VERTICAL
+        horizontal,
+        vertical
     }
 
     private String align;

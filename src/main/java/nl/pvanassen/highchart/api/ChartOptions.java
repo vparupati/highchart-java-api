@@ -1,7 +1,6 @@
 package nl.pvanassen.highchart.api;
 
 
-import java.util.Collections;
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 

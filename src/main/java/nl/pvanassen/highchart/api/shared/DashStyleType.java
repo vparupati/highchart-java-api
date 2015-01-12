@@ -20,15 +20,15 @@ package nl.pvanassen.highchart.api.shared;
  * @author shaun.lefeuvre
  */
 public enum DashStyleType {
-    SOLID,
-    SHORTDASH,
-    SHORTDOT,
-    SHORTDASHDOT,
-    SHORTDASHDOTDOT,
-    DOT,
-    DASH,
-    LONGDASH,
-    DASHDOT,
-    LONGDASHDOT,
-    LONGDASHDOTDOT
+    Solid,
+    ShortDash,
+    ShortDot,
+    ShortDashDot,
+    ShortDashDotDot,
+    Dot,
+    Dash,
+    LongDash,
+    DashDot,
+    LongDashDot,
+    LongDashDotDot
 }

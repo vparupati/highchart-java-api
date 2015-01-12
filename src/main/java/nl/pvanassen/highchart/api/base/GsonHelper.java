@@ -1,5 +1,6 @@
 package nl.pvanassen.highchart.api.base;
 
+import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.format.DateTimeLabelFormats;
 import nl.pvanassen.highchart.api.serializer.DateTimeLabelFormatsSerializer;
 import nl.pvanassen.highchart.api.serializer.StyleSerializer;
@@ -16,7 +17,7 @@ public final class GsonHelper {
 
     private static final GsonHelper INSTANCE = new GsonHelper();
 
-    static String toJson(Object object) {
+    public static String toJson(Object object) {
         return GsonHelper.INSTANCE.gsonBuilder.create().toJson(object);
     }
 

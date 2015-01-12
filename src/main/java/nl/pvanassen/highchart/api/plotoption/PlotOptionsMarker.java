@@ -1,8 +1,11 @@
 package nl.pvanassen.highchart.api.plotoption;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
+import nl.pvanassen.highchart.api.shared.Styleable;
 
-public class PlotOptionsMarker extends BaseObject {
+public class PlotOptionsMarker 
+    extends     BaseObject
+    implements  Styleable<PlotOptionsMarker> {
 
     private Boolean enabled;
     
@@ -17,8 +20,20 @@ public class PlotOptionsMarker extends BaseObject {
     private PlotMarkerStates states;
 
     private String symbol;
-
-    public PlotOptionsMarker() {
+    
+    @Override
+    public PlotOptionsMarker style(
+            final PlotOptionsMarker src) {
+        if(src == null) {
+            return this;
+        }
+        this.enabled = src.enabled;
+        this.fillColor = src.fillColor;
+        this.lineColor = src.lineColor;
+        this.lineWidth = src.lineWidth;
+        this.radius = src.radius;
+        this.symbol = src.symbol;
+        return this;
     }
 
     public PlotMarkerStates getStates() {

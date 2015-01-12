@@ -5,8 +5,12 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.plotoption.PlotOptionsDataLabels;
 import nl.pvanassen.highchart.api.plotoption.PlotOptionsMarker;
 import nl.pvanassen.highchart.api.shared.HexColor;
+import nl.pvanassen.highchart.api.shared.Styleable;
+import nl.pvanassen.highchart.api.utils.Utils;
 
-public class Point extends BaseObject {
+public class Point 
+    extends     BaseObject
+    implements  Styleable<Point> {
     
     private String color;
     
@@ -29,9 +33,27 @@ public class Point extends BaseObject {
     private Double x;
 
     private Double y;
-
-    public Point() {
+    
+    private Double z;
+    
+    @Override
+    public Point style(
+            final Point src) {
+        if(src == null) {
+            return this;
+        }
+        this.color = src.color;
+        Utils.style(this.dataLabels, src.dataLabels);
+        this.drilldown = src.drilldown;
+        this.id = src.id;
+        this.isIntermediateSum = src.isIntermediateSum;
+        this.isSum = src.isSum;
+        Utils.style(this.marker, src.marker);
+        this.name = src.name;
+        this.sliced = src.sliced;
+        return this;
     }
+ 
 
     public String getColor() {
         return color;
@@ -49,6 +71,26 @@ public class Point extends BaseObject {
         return y;
     }
 
+    /**
+     * @return the z
+     */
+    public Double getZ() {
+        return z;
+    }
+    
+    public Point setZ(double z) {
+        this.z = z;
+        return this;
+    }
+
+    /**
+     * @param z the z to set
+     */
+    public Point setZ(Double z) {
+        this.z = z;
+        return this;
+    }
+
     public Point setColor(String color) {
         this.color = color;
         return this;
@@ -63,23 +105,23 @@ public class Point extends BaseObject {
         this.name = name;
         return this;
     }
-
-    public Point setX(Double x) {
-        this.x = x;
-        return this;
-    }
-
+    
     public Point setX(double x) {
         this.x = x;
         return this;
     }
 
-    public Point setY(Double y) {
+    public Point setX(Double x) {
+        this.x = x;
+        return this;
+    }
+    
+    public Point setY(double y) {
         this.y = y;
         return this;
     }
 
-    public Point setY(double y) {
+    public Point setY(Double y) {
         this.y = y;
         return this;
     }

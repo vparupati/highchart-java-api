@@ -93,19 +93,22 @@ public class Axis extends BaseObject {
         return labels;
     }
 
-    public double getMax() {
+    public Double getMax() {
         return max;
     }
 
-    public double getMin() {
+    public Double getMin() {
         return min;
     }
 
     public JsonArray<AxisPlotLines> getPlotLines() {
+        if(this.plotLines == null) {
+            this.plotLines = new JsonArray<AxisPlotLines>();
+        }
         return plotLines;
     }
 
-    public double getTickInterval() {
+    public Double getTickInterval() {
         return tickInterval;
     }
 
@@ -120,40 +123,17 @@ public class Axis extends BaseObject {
         return type;
     }
 
-    public boolean isShowFirstLabel() {
-        return showFirstLabel;
-    }
-
-    public boolean isStartOnTick() {
-        return startOnTick;
-    }
-
-    public Axis setMax(double max) {
+    public Axis setMax(Double max) {
         this.max = max;
         return this;
     }
 
-    public Axis setMin(double min) {
+    public Axis setMin(Double min) {
         this.min = min;
         return this;
     }
 
-    public Axis setPlotLines(JsonArray<AxisPlotLines> plotLines) {
-        this.plotLines = plotLines;
-        return this;
-    }
-
-    public Axis setShowFirstLabel(boolean showFirstLabel) {
-        this.showFirstLabel = showFirstLabel;
-        return this;
-    }
-
-    public Axis setStartOnTick(boolean startOnTick) {
-        this.startOnTick = startOnTick;
-        return this;
-    }
-
-    public Axis setTickInterval(double tickInterval) {
+    public Axis setTickInterval(Double tickInterval) {
         this.tickInterval = tickInterval;
         return this;
     }

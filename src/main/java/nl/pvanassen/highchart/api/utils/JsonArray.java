@@ -1,14 +1,13 @@
 package nl.pvanassen.highchart.api.utils;
 
 import java.util.ArrayList;
+import nl.pvanassen.highchart.api.base.GsonHelper;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import nl.pvanassen.highchart.api.shared.Jsonify;
 
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.NONE)
-public class JsonArray<E> extends ArrayList<E> {
+public class JsonArray<E> 
+    extends     ArrayList<E> 
+    implements  Jsonify {
 
     private static final long serialVersionUID = 1L;
 
@@ -51,5 +50,10 @@ public class JsonArray<E> extends ArrayList<E> {
             }
             add(index, value);
         }
+    }
+
+    @Override
+    public String toJson() {
+        return GsonHelper.toJson(this);
     }
 }
