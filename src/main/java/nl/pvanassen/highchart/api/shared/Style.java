@@ -3,6 +3,7 @@ package nl.pvanassen.highchart.api.shared;
 import java.util.HashMap;
 import java.util.Map;
 import nl.pvanassen.highchart.api.base.BaseObject;
+import nl.pvanassen.highchart.api.utils.Utils;
 
 public class Style 
     extends     BaseObject
@@ -36,13 +37,7 @@ public class Style
         if(src == null) {
             return this;
         }
-        if(this.properties == null) {
-            return this;
-        }
-        if(src.properties == null) {
-            return this;
-        }
-        this.properties.putAll(src.properties);
+        Utils.stylePrimitiveMap(this.properties, src.properties);
         return this;
     }
 }

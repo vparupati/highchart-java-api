@@ -60,7 +60,7 @@ public class PlotOptionsSeries
     
     private Boolean grouping;
     
-    private Integer innserSize;
+    private String innerSize;
     
     private String lineColor;
     
@@ -128,7 +128,7 @@ public class PlotOptionsSeries
         this.groupPadding = src.groupPadding;
         this.groupZPadding = src.groupZPadding;
         this.grouping = src.grouping;
-        this.innserSize = src.innserSize;
+        this.innerSize = src.innerSize;
         this.lineColor = src.lineColor;
         this.lineWidth = src.lineWidth;
         this.linkedTo = src.linkedTo;
@@ -621,16 +621,16 @@ public class PlotOptionsSeries
     /**
      * @return the innserSize
      */
-    public Integer getInnserSize() {
-        return innserSize;
+    public String getInnerSize() {
+        return innerSize;
     }
 
     /**
      * @param innserSize the innserSize to set
      * @return 
      */
-    public PlotOptionsSeries setInnserSize(Integer innserSize) {
-        this.innserSize = innserSize;
+    public PlotOptionsSeries setInnerSize(String innerSize) {
+        this.innerSize = innerSize;
         return this;
     }
 

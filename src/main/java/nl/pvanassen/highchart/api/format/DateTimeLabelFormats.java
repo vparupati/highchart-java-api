@@ -4,8 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
+import nl.pvanassen.highchart.api.shared.Styleable;
+import nl.pvanassen.highchart.api.utils.Utils;
 
-public class DateTimeLabelFormats extends BaseObject {
+public class DateTimeLabelFormats 
+    extends     BaseObject
+    implements  Styleable<DateTimeLabelFormats> {
 
     public enum TimeUnit {
         SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, YEAR;
@@ -15,6 +19,16 @@ public class DateTimeLabelFormats extends BaseObject {
 
     public DateTimeLabelFormats() {
         formats = null;
+    }
+    
+    @Override
+    public DateTimeLabelFormats style(
+            final DateTimeLabelFormats src) {
+        if(src == null) {
+            return this;
+        }
+        Utils.stylePrimitiveMap(this.formats, src.formats);
+        return this;
     }
 
     public String getFormat(TimeUnit unit) {

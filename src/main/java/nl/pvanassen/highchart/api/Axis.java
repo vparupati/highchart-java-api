@@ -8,10 +8,14 @@ import nl.pvanassen.highchart.api.format.DateTimeLabelFormats;
 import nl.pvanassen.highchart.api.shared.DashStyleType;
 import nl.pvanassen.highchart.api.shared.EnumString;
 import nl.pvanassen.highchart.api.shared.HexColor;
+import nl.pvanassen.highchart.api.shared.Styleable;
 import nl.pvanassen.highchart.api.utils.ArrayString;
 import nl.pvanassen.highchart.api.utils.JsonArray;
+import nl.pvanassen.highchart.api.utils.Utils;
 
-public class Axis extends BaseObject {
+public class Axis 
+    extends     BaseObject
+    implements  Styleable<Axis> {
 
     public enum Type {
         LINEAR,
@@ -67,6 +71,38 @@ public class Axis extends BaseObject {
     private String type;
 
     public Axis() { }
+    
+    @Override
+    public Axis style(
+            final Axis src) {
+        if(src == null) {
+            return this;
+        }
+        Utils.stylePrimitiveArray(this.categories, src.categories);
+        Utils.style(this.dateTimeLabelFormats, src.dateTimeLabelFormats);
+        this.gridLineColor = src.gridLineColor;
+        this.gridLineDashStyle = src.gridLineDashStyle;
+        this.gridLineWidth = src.gridLineWidth;
+        Utils.style(this.labels, src.labels);
+        this.lineColor = src.lineColor;
+        this.lineWidth = src.lineWidth;
+        this.max = src.max;
+        this.min = src.min;
+        this.minorGridLineColor = src.minorGridLineColor;
+        this.minorGridLineDashStyle = src.minorGridLineDashStyle;
+        this.minorGridLineWidth = src.minorGridLineWidth;
+        this.opposite = src.opposite;
+        this.plotLines = src.plotLines;
+        this.reversed = src.reversed;
+        this.showEmpty = src.showEmpty;
+        this.showFirstLabel = src.showFirstLabel;
+        this.showLastLabel = src.showLastLabel;
+        this.startOnTick = src.startOnTick;
+        this.tickInterval = src.tickInterval;
+        Utils.style(this.title, src.title);
+        this.type = src.type;
+        return this;
+    }
 
     public ArrayString getCategories() {
         if (categories == null) {

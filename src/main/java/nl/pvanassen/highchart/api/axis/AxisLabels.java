@@ -4,9 +4,14 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.shared.AlignType;
 import nl.pvanassen.highchart.api.shared.EnumString;
+import nl.pvanassen.highchart.api.shared.Styleable;
+import nl.pvanassen.highchart.api.utils.Utils;
 
 
-public class AxisLabels extends BaseObject {
+public class AxisLabels 
+    extends     BaseObject
+    implements  Styleable<AxisLabels> {
+    
     private String align;
     
     private Boolean enabled;
@@ -32,6 +37,28 @@ public class AxisLabels extends BaseObject {
     private Integer y;
     
     private Integer zIndex;
+    
+    @Override
+    public AxisLabels style(
+            final AxisLabels src) {
+        if(src == null) {
+            return this;
+        }
+        this.align = src.align;
+        this.enabled = src.enabled;
+        this.format = src.format;
+        this.maxStaggerLines = src.maxStaggerLines;
+        this.overflow = src.overflow;
+        this.rotation = src.rotation;
+        this.staggerLines = src.staggerLines;
+        this.step = src.step;
+        Utils.style(this.style, src.style);
+        this.useHTML = src.useHTML;
+        this.x = src.x;
+        this.y = src.y;
+        this.zIndex = src.zIndex;
+        return this;
+    }
 
     public String getAlign() {
         return align;

@@ -26,9 +26,9 @@ public class ChartOptions extends BaseObject {
 
     private Tooltip tooltip;
 
-    private Axis xAxis;
+    private JsonArray<Axis> xAxis;
 
-    private Axis yAxis;
+    private JsonArray<Axis> yAxis;
 
     public Chart getChart() {
         if (chart == null) {
@@ -99,17 +99,35 @@ public class ChartOptions extends BaseObject {
         }
         return tooltip;
     }
+    
+    public Axis getXAxis(int index) {
+        if(index < this.getXAxis().size()) {
+            return this.getXAxis().get(index);
+        } else {
+            this.getXAxis().add(new Axis());
+            return this.getXAxis(index);
+        }
+    }
 
-    public Axis getXAxis() {
+    public JsonArray<Axis> getXAxis() {
         if (xAxis == null) {
-            xAxis = new Axis();
+            xAxis = new JsonArray<Axis>();
         }
         return xAxis;
     }
+    
+    public Axis getYAxis(int index) {
+        if(index < this.getYAxis().size()) {
+            return this.getYAxis().get(index);
+        } else {
+            this.getYAxis().add(new Axis());
+            return this.getYAxis(index);
+        }
+    }
 
-    public Axis getYAxis() {
+    public JsonArray<Axis> getYAxis() {
         if (yAxis == null) {
-            yAxis = new Axis();
+            yAxis = new JsonArray<Axis>();
         }
         return yAxis;
     }

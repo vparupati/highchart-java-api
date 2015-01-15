@@ -2,6 +2,7 @@ package nl.pvanassen.highchart;
 
 import java.util.Calendar;
 import java.util.TimeZone;
+import nl.pvanassen.highchart.api.Axis;
 
 import nl.pvanassen.highchart.api.ChartOptions;
 import nl.pvanassen.highchart.api.Point;
@@ -33,14 +34,13 @@ public class TestSplineIrregularTime {
         chartOptions.getSubtitle().setText("An example of irregular time data in Highcharts JS");
 
         // axis
-        chartOptions.getXAxis().setType("datetime").getDateTimeLabelFormats().set(TimeUnit.MONTH, "%e. %b")
+        chartOptions.getXAxis(0).setType(Axis.Type.DATETIME).getDateTimeLabelFormats().set(TimeUnit.MONTH, "%e. %b")
                 .set(TimeUnit.YEAR, "%b");
-        chartOptions.getYAxis().setMin(0).getTitle().setText("Snow depth (m)");
+        chartOptions.getYAxis(0).setMin(0.0).getTitle().setText("Snow depth (m)");
 
         // plotOptions
         chartOptions.getPlotOptions().getPie().setAllowPointSelect(true).getDataLabels().setEnabled(true)
-                .setColor("#000000")
-                .setFormatter("function() {return '<b>'+ this.point.name +'</b>: '+ this.y +' %';}");
+                .setColor("#000000");
 
         Series newSeries = new Series().setName("Winter 2007-2008");
         chartOptions.getSeries().pushElement(newSeries);

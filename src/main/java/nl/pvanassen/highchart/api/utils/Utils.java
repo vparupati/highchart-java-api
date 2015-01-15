@@ -15,6 +15,7 @@
  */
 package nl.pvanassen.highchart.api.utils;
 
+import java.util.Map;
 import nl.pvanassen.highchart.api.shared.Styleable;
 
 /**
@@ -59,6 +60,14 @@ public class Utils {
                     target.size(), src.size()); i++) {
                 target.set(i, src.get(i));
             }
+        }
+    }
+    
+    public static <K,V> void stylePrimitiveMap(
+            final Map<K, V> target, 
+            final Map<K, V> src) {
+        if(!isAnyNull(target, src)) {
+            target.putAll(src);
         }
     }
 }

@@ -4,9 +4,13 @@ import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.shared.AlignType;
 import nl.pvanassen.highchart.api.shared.EnumString;
+import nl.pvanassen.highchart.api.shared.Styleable;
 import nl.pvanassen.highchart.api.shared.VerticalAlignType;
+import nl.pvanassen.highchart.api.utils.Utils;
 
-public class Title extends BaseObject {
+public class Title 
+    extends     BaseObject
+    implements  Styleable<Title> {
     
     private String align;
     
@@ -28,6 +32,24 @@ public class Title extends BaseObject {
 
     public Title() {
         this.text = "";
+    }
+    
+    @Override
+    public Title style(
+            final Title src) {
+        if(src == null) {
+            return this;
+        }
+        this.align = src.align;
+        this.floating = src.floating;
+        this.margin = src.margin;
+        Utils.style(this.style, src.style);
+        this.text = src.text;
+        this.useHTML = src.useHTML;
+        this.verticalAlign = src.verticalAlign;
+        this.x = src.x;
+        this.y = src.y;
+        return this;
     }
 
     public Style getStyle() {
