@@ -30,11 +30,11 @@ public class Point
     
     private Boolean sliced;
     
-    private Double x;
+    private NullableDouble x;
 
-    private Double y;
+    private NullableDouble y;
     
-    private Double z;
+    private NullableDouble z;
     
     @Override
     public Point style(
@@ -64,22 +64,22 @@ public class Point
     }
 
     public Double getX() {
-        return x;
+        return x.getValue();
     }
 
     public Double getY() {
-        return y;
+        return y.getValue();
     }
 
     /**
      * @return the z
      */
     public Double getZ() {
-        return z;
+        return z.getValue();
     }
     
     public Point setZ(double z) {
-        this.z = z;
+        this.z = NullableDouble.of(z);
         return this;
     }
 
@@ -87,7 +87,7 @@ public class Point
      * @param z the z to set
      */
     public Point setZ(Double z) {
-        this.z = z;
+        this.z = NullableDouble.of(z);
         return this;
     }
 
@@ -107,22 +107,22 @@ public class Point
     }
     
     public Point setX(double x) {
-        this.x = x;
+        this.x = NullableDouble.of(x);
         return this;
     }
 
     public Point setX(Double x) {
-        this.x = x;
+        this.x = NullableDouble.of(x);
         return this;
     }
     
     public Point setY(double y) {
-        this.y = y;
+        this.y = NullableDouble.of(y);
         return this;
     }
 
     public Point setY(Double y) {
-        this.y = y;
+        this.y = NullableDouble.of(y);
         return this;
     }
 

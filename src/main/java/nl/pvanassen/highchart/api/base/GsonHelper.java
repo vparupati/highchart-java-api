@@ -8,6 +8,8 @@ import nl.pvanassen.highchart.api.serializer.StyleSerializer;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.GsonBuilder;
+import nl.pvanassen.highchart.api.NullableDouble;
+import nl.pvanassen.highchart.api.serializer.NullableDoubleSerializer;
 
 public final class GsonHelper {
 
@@ -25,8 +27,16 @@ public final class GsonHelper {
 
     private GsonHelper() {
         gsonBuilder = new GsonBuilder()
-        .registerTypeAdapter(DateTimeLabelFormats.class, new DateTimeLabelFormatsSerializer()) //
-        .registerTypeAdapter(Style.class, new StyleSerializer())//
+        .registerTypeAdapter(
+                DateTimeLabelFormats.class, 
+                new DateTimeLabelFormatsSerializer()) //
+        .registerTypeAdapter(
+                Style.class, 
+                new StyleSerializer())//
+        .registerTypeAdapter(
+                NullableDouble.class, 
+                new NullableDoubleSerializer())
+        .serializeSpecialFloatingPointValues()
         .setDateFormat(GsonHelper.DATE_FORMAT)//
         .setExclusionStrategies(new ExclusionStrategy() {
 
