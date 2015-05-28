@@ -1,53 +1,47 @@
 package nl.pvanassen.highchart.api;
 
-import javax.xml.bind.annotation.*;
 
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlRootElement(name = "chartOptions")
-@XmlAccessorType(XmlAccessType.NONE)
 public class ChartOptions extends BaseObject {
 
-    @XmlTransient
     private Chart chart;
+    
+    private JsonArray<String> colors;
 
-    @XmlElement
     private Credits credits;
 
-    @XmlElement
     private Labels labels;
 
-    @XmlElement
     private Legend legend;
 
-    @XmlElement
     private PlotOptions plotOptions;
 
-    // @XmlTransient
-    @XmlElements(@XmlElement(name = "series", type = Series.class))
     private JsonArray<Series> series;
 
-    @XmlElement
     private Title title;
 
-    @XmlElement
     private Title subtitle;
 
-    @XmlElement
     private Tooltip tooltip;
 
-    @XmlElement
-    private Axis xAxis;
+    private JsonArray<Axis> xAxis;
 
-    @XmlElement
-    private Axis yAxis;
+    private JsonArray<Axis> yAxis;
 
     public Chart getChart() {
         if (chart == null) {
             chart = new Chart();
         }
         return chart;
+    }
+    
+    public JsonArray<String> getColors() {
+        if(this.colors == null) {
+            this.colors = new JsonArray<String>();
+        }
+        return this.colors;
     }
 
     public Credits getCredits() {
@@ -78,7 +72,6 @@ public class ChartOptions extends BaseObject {
         return plotOptions;
     }
 
-    @XmlTransient
     public JsonArray<Series> getSeries() {
         if (series == null) {
             series = new JsonArray<Series>();
@@ -106,17 +99,35 @@ public class ChartOptions extends BaseObject {
         }
         return tooltip;
     }
+    
+    public Axis getXAxis(int index) {
+        if(index < this.getXAxis().size()) {
+            return this.getXAxis().get(index);
+        } else {
+            this.getXAxis().add(new Axis());
+            return this.getXAxis(index);
+        }
+    }
 
-    public Axis getXAxis() {
+    public JsonArray<Axis> getXAxis() {
         if (xAxis == null) {
-            xAxis = new Axis();
+            xAxis = new JsonArray<Axis>();
         }
         return xAxis;
     }
+    
+    public Axis getYAxis(int index) {
+        if(index < this.getYAxis().size()) {
+            return this.getYAxis().get(index);
+        } else {
+            this.getYAxis().add(new Axis());
+            return this.getYAxis(index);
+        }
+    }
 
-    public Axis getYAxis() {
+    public JsonArray<Axis> getYAxis() {
         if (yAxis == null) {
-            yAxis = new Axis();
+            yAxis = new JsonArray<Axis>();
         }
         return yAxis;
     }

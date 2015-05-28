@@ -1,28 +1,32 @@
 package nl.pvanassen.highchart.api;
 
-import javax.xml.bind.annotation.*;
-
 import nl.pvanassen.highchart.api.base.BaseObject;
 import nl.pvanassen.highchart.api.label.LabelsItems;
+import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
-@XmlAccessorType(XmlAccessType.NONE)
-@XmlType(namespace = "chart-options")
 public class Labels extends BaseObject {
 
-    @XmlTransient
     private JsonArray<LabelsItems> items;
+    
+    private Style style;
 
     public Labels() {
     }
 
-    @XmlTransient
     public JsonArray<LabelsItems> getItems() {
         if (items == null) {
             items = new JsonArray<LabelsItems>();
         }
 
         return items;
+    }
+    
+    public Style getStyle() {
+        if(this.style == null) {
+            this.style = new Style();
+        }
+        return this.style;
     }
 
 }

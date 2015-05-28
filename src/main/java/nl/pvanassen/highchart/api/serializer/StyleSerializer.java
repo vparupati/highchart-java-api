@@ -2,7 +2,7 @@ package nl.pvanassen.highchart.api.serializer;
 
 import java.util.Map;
 
-import nl.pvanassen.highchart.api.base.Style;
+import nl.pvanassen.highchart.api.shared.Style;
 
 public class StyleSerializer extends Serializer<Style> {
 

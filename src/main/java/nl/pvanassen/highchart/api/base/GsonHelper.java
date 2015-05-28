@@ -1,5 +1,6 @@
 package nl.pvanassen.highchart.api.base;
 
+import nl.pvanassen.highchart.api.shared.Style;
 import nl.pvanassen.highchart.api.format.DateTimeLabelFormats;
 import nl.pvanassen.highchart.api.serializer.DateTimeLabelFormatsSerializer;
 import nl.pvanassen.highchart.api.serializer.StyleSerializer;
@@ -7,6 +8,8 @@ import nl.pvanassen.highchart.api.serializer.StyleSerializer;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.GsonBuilder;
+import nl.pvanassen.highchart.api.NullableDouble;
+import nl.pvanassen.highchart.api.serializer.NullableDoubleSerializer;
 
 public final class GsonHelper {
 
@@ -16,7 +19,7 @@ public final class GsonHelper {
 
     private static final GsonHelper INSTANCE = new GsonHelper();
 
-    static String toJson(Object object) {
+    public static String toJson(Object object) {
         return GsonHelper.INSTANCE.gsonBuilder.create().toJson(object);
     }
 
@@ -24,8 +27,16 @@ public final class GsonHelper {
 
     private GsonHelper() {
         gsonBuilder = new GsonBuilder()
-        .registerTypeAdapter(DateTimeLabelFormats.class, new DateTimeLabelFormatsSerializer()) //
-        .registerTypeAdapter(Style.class, new StyleSerializer())//
+        .registerTypeAdapter(
+                DateTimeLabelFormats.class, 
+                new DateTimeLabelFormatsSerializer()) //
+        .registerTypeAdapter(
+                Style.class, 
+                new StyleSerializer())//
+        .registerTypeAdapter(
+                NullableDouble.class, 
+                new NullableDoubleSerializer())
+        .serializeSpecialFloatingPointValues()
         .setDateFormat(GsonHelper.DATE_FORMAT)//
         .setExclusionStrategies(new ExclusionStrategy() {
 

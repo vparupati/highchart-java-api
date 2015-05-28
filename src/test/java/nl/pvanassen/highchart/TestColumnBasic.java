@@ -1,9 +1,12 @@
 package nl.pvanassen.highchart;
 
 import nl.pvanassen.highchart.api.ChartOptions;
+import nl.pvanassen.highchart.api.Legend.LegendLayoutType;
 import nl.pvanassen.highchart.api.Point;
 import nl.pvanassen.highchart.api.Series;
+import nl.pvanassen.highchart.api.shared.AlignType;
 import nl.pvanassen.highchart.api.shared.SeriesType;
+import nl.pvanassen.highchart.api.shared.VerticalAlignType;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 
 import org.junit.Assert;
@@ -19,8 +22,8 @@ public class TestColumnBasic {
             "{\"data\":[{\"y\":83.6},{\"y\":78.8},{\"y\":98.5},{\"y\":93.4},{\"y\":106.0},{\"y\":84.5},{\"y\":105.0},{\"y\":104.3},{\"y\":91.2},{\"y\":83.5},{\"y\":106.6},{\"y\":92.3}],\"name\":\"New York\"}," +
             "{\"data\":[{\"y\":48.9},{\"y\":38.8},{\"y\":39.3},{\"y\":41.4},{\"y\":47.0},{\"y\":48.3},{\"y\":59.0},{\"y\":59.6},{\"y\":52.4},{\"y\":65.2},{\"y\":59.3},{\"y\":51.2}],\"name\":\"London\"}," +
             "{\"data\":[{\"y\":42.4},{\"y\":33.2},{\"y\":34.5},{\"y\":39.7},{\"y\":52.6},{\"y\":75.5},{\"y\":57.4},{\"y\":60.4},{\"y\":47.6},{\"y\":39.1},{\"y\":46.8},{\"y\":51.1}],\"name\":\"Berlin\"}]," +
-            "\"title\":{\"text\":\"Monthly Average Rainfall\"},\"subtitle\":{\"text\":\"Source: WorldClimate.com\"},\"xAxis\":{\"categories\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"]},\"yAxis\":" +
-            "{\"min\":0.0,\"title\":{\"text\":\"Rainfall (mm)\"}}}";
+            "\"title\":{\"text\":\"Monthly Average Rainfall\"},\"subtitle\":{\"text\":\"Source: WorldClimate.com\"},\"xAxis\":[{\"categories\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"]}],\"yAxis\":[" +
+            "{\"min\":0.0,\"title\":{\"text\":\"Rainfall (mm)\"}}]}";
 
     @Test
     public void createColumnBasic() {
@@ -35,14 +38,14 @@ public class TestColumnBasic {
         chartOptions.getSubtitle().setText("Source: WorldClimate.com");
 
         // xAxis
-        chartOptions.getXAxis().getCategories().pushString("Jan").pushString("Feb").pushString("Mar").pushString("Apr")
+        chartOptions.getXAxis(0).getCategories().pushString("Jan").pushString("Feb").pushString("Mar").pushString("Apr")
                 .pushString("May").pushString("Jun").pushString("Jul").pushString("Aug").pushString("Sep")
                 .pushString("Oct").pushString("Nov").pushString("Dec");
         // yAxis
-        chartOptions.getYAxis().setMin(0).getTitle().setText("Rainfall (mm)");
+        chartOptions.getYAxis(0).setMin(0.0).getTitle().setText("Rainfall (mm)");
 
         // Legend
-        chartOptions.getLegend().setLayout("vertical").setAlign("left").setVerticalAlign("top").setX(100).setY(70);
+        chartOptions.getLegend().setLayout(LegendLayoutType.vertical).setAlign(AlignType.left).setVerticalAlign(VerticalAlignType.top).setX(100).setY(70);
 
         // PlotOptions
         chartOptions.getPlotOptions().getColumn().setBorderWidth(0);
@@ -61,6 +64,8 @@ public class TestColumnBasic {
                 46.8, 51.1 });
 
         String json = chartOptions.toJson();
+        
+        System.out.println(chartOptions.toJson());
 
         Assert.assertEquals("Expected column basic json", TestColumnBasic.columnBasicJson, json);
     }
