@@ -12,7 +12,7 @@ import nl.pvanassen.highchart.api.utils.ArrayString;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 import nl.pvanassen.highchart.api.utils.Utils;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class Axis 
     extends     BaseObject
