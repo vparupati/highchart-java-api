@@ -134,7 +134,7 @@ public class ChartOptions extends BaseObject {
         return yAxis;
     }
 
-    public DrillDown getDrillDown() {
+    public DrillDown getDrilldown() {
         if (drilldown == null) {
             drilldown = new DrillDown();
         }
