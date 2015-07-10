@@ -11,7 +11,7 @@ public class DrillDown extends BaseObject {
 
     public JsonArray<Series> getSeries() {
         if (series == null) {
-            series = new JsonArray<>();
+            series = new JsonArray<Series>();
         }
         return series;
     }
