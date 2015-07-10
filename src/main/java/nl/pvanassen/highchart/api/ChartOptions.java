@@ -30,6 +30,8 @@ public class ChartOptions extends BaseObject {
 
     private JsonArray<Axis> yAxis;
 
+    private DrillDown drilldown;
+
     public Chart getChart() {
         if (chart == null) {
             chart = new Chart();
@@ -131,5 +133,13 @@ public class ChartOptions extends BaseObject {
         }
         return yAxis;
     }
+
+    public DrillDown getDrillDown() {
+        if (drilldown == null) {
+            drilldown = new DrillDown();
+        }
+        return drilldown;
+    }
+
 
 }
