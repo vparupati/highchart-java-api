@@ -1,6 +1,5 @@
 package nl.pvanassen.highchart.api;
 
-import java.awt.Color;
 import nl.pvanassen.highchart.api.axis.AxisLabels;
 import nl.pvanassen.highchart.api.axis.AxisPlotLines;
 import nl.pvanassen.highchart.api.base.BaseObject;
@@ -12,6 +11,8 @@ import nl.pvanassen.highchart.api.shared.Styleable;
 import nl.pvanassen.highchart.api.utils.ArrayString;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 import nl.pvanassen.highchart.api.utils.Utils;
+
+import java.awt.Color;
 
 public class Axis 
     extends     BaseObject
@@ -66,6 +67,8 @@ public class Axis
 
     private Double tickInterval;
 
+    private Double minTickInterval;
+
     private Title title;
     
     private String type;
@@ -99,6 +102,7 @@ public class Axis
         this.showLastLabel = src.showLastLabel;
         this.startOnTick = src.startOnTick;
         this.tickInterval = src.tickInterval;
+        this.minTickInterval = src.minTickInterval;
         Utils.style(this.title, src.title);
         this.type = src.type;
         return this;
@@ -148,6 +152,10 @@ public class Axis
         return tickInterval;
     }
 
+    public Double getMinTickInterval() {
+        return minTickInterval;
+    }
+
     public Title getTitle() {
         if (title == null) {
             title = new Title();
@@ -174,8 +182,13 @@ public class Axis
         return this;
     }
 
+    public Axis setMinTickInterval(double minTickInterval) {
+        this.minTickInterval = minTickInterval;
+        return this;
+    }
+
     public Axis setType(Type type) {
-        this.type = EnumString.toString(type);
+        this.type = EnumString.toString(type).toLowerCase();
         return this;
     }
     
