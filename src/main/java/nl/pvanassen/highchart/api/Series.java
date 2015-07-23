@@ -24,6 +24,8 @@ public class Series
     
     private Integer zIndex;
     
+    private Tooltip tooltip;
+    
     public Series style(
             final Series src) {
         super.style(src);
@@ -197,4 +199,22 @@ public class Series
         this.zIndex = zIndex;
         return this;
     }
+
+    /**
+     *    
+     * @return {@link Tooltip}
+     */
+    public Tooltip getTooltip() {
+		return tooltip;
+	}
+	/**
+	 * To define text to display on Tooptip of Series
+	 * @param tooltip
+	 * @return 
+	 */
+	public Series setTooltip(Tooltip tooltip) {
+		this.tooltip = tooltip;
+		return this;
+	}
+    
 }
